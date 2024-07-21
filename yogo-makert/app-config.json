@@ -1,10 +1,10 @@
 {
   "app": {
-    "title": "",
-    "headerTitle": "",
-    "headerColor": "#1087be",
+    "title": "Yogo Markert",
+    "headerTitle": "Yogo Markert",
+    "headerColor": "#00b815",
     "textColor": "white",
-    "statusBarColor": "#1087be",
+    "statusBarColor": "#51fb13",
     "leftButton": "back",
     "statusBar": "normal",
     "actionBarHidden": false,

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import {
@@ -10,26 +10,24 @@ import {
   Sheet,
   Swiper,
   Text,
-  useTheme,
-  Header,
-  Tabs,
+  Input,
 } from "zmp-ui";
 import "../../css/detailHome.css";
-import CategoryProduct from "@/pages/home/CategoryProduct"; // Nếu có cấu hình alias
+import CategoryProduct from "@/pages/home/CategoryProduct";
+import  ProductList  from "@/pages/home/ProductList";
 
 const categories = [
   { id: 1, name: "Sản phẩm 1", icon: "/images/banner-1.jpg" },
   { id: 2, name: "Sản phẩm 2", icon: "/images/banner-2.webp" },
   { id: 3, name: "Sản phẩm 3", icon: "/images/banner-3.webp" },
   { id: 4, name: "Sản phẩm 4", icon: "/images/banner-4.webp" },
-  // Thêm các danh mục khác tại đây
 ];
 
 const gotoCategory = (id) => {
   console.log("Chuyển đến danh mục:", id);
-  // Thực hiện các hành động chuyển đến danh mục tương ứng tại đây
 };
-const DetailHome = (props) => {
+
+const Home = (props) => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("chat");
   const [actionSheetVisible, setActionSheetVisible] = useState(false);
@@ -38,60 +36,22 @@ const DetailHome = (props) => {
   const openChatScreen = () => {
     console.log("Open Chat Screen");
   };
+
   return (
     <Page className="container plc-action">
-      <Header
-        className="app-header no-border pl-4 flex-none pb-[6px]"
-        showBackIcon={false}
-        title={
-          <Box flex alignItems="center" className="space-x-2 pd-2">
-            <img
-              className="w-8 h-8 rounded-lg border-inset"
-              src="/images/logo.png"
-            />
-            <Box>
-              <Text.Title size="small">Wind Lập Trình</Text.Title>
-              <br />
-              <Text size="xxSmall" className="text-gray col-12">
-                Welcome, Nguyễn Thanh Phong!
-              </Text>
-            </Box>
-          </Box>
-        }
-      />
-      <Box
-        mt={6}
-        flex
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-      >
+      <Box mt={2} flex justifyContent="center" alignItems="center">
         <Swiper>
           <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/banner-1.jpg"
-              alt="slide-2"
-            />
+            <img className="slide-img" src="/images/anh_1.jpg" alt="slide-2" />
           </Swiper.Slide>
           <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/banner-4.webp"
-              alt="slide-2"
-            />
-          </Swiper.Slide>
-          <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/banner-4.webp"
-              alt="slide-2"
-            />
+            <img className="slide-img" src="/images/anh_2.jpg" alt="slide-2" />
           </Swiper.Slide>
         </Swiper>
       </Box>
-
-      {/* call api service store */}
+      <Box mt={2} mb={2}>
+        <Input.Search placeholder="search product" size="small" />
+      </Box>
       <Box mt={2} className="service-store">
         <Box className="slider-container bg-white p-4">
           {[...Array(10)].map((_, index) => (
@@ -105,28 +65,16 @@ const DetailHome = (props) => {
                 alt="Product"
               />
               <Text size="xxSmall" className="text-gray">
-                Sản phẩm
+                Category
               </Text>
             </div>
           ))}
         </Box>
       </Box>
-
       <CategoryProduct categories={categories} gotoCategory={gotoCategory} />
       <Box mt={6}>
-        <Text.Title className="text-title">
-          Hệ thống trung tâm SLK Solutions
-        </Text.Title>
-        <Text.Title className="text-detail">
-          iLeader cung cấp cho trung tâm ngoại ngữ công cụ hỗ trợ vận hành trung
-          tâm hiệu quả nhất, tất cả các đầu công việc được vận hành trên phần
-          mềm, lưu trữ và tra cứu thông tin nhanh chóng, giúp nhân sự tiết kiệm
-          thời gian và giảm sai sót trong công việc. Từ đó giúp trung tâm tập
-          trung và việc nâng cao chất lượng dịch vụ để phát triển hệ thống trung
-          tâm, mở rộng quy mô và phát triển.
-        </Text.Title>
+        <ProductList />
       </Box>
-
       <BottomNavigation
         fixed
         activeKey={activeTab}
@@ -141,36 +89,26 @@ const DetailHome = (props) => {
           onClick={openChatScreen}
         />
         <BottomNavigation.Item
-          label="Sự kiện"
+          label="Thông báo"
           key="contact"
           icon={
             <div className="accounting-icon-wrapper">
               <Icon icon="zi-clock-1" />
-              {/* {totalEvents > 0 && (
-                <div className="red-circle">{totalEvents}</div>
-              )} */}
             </div>
           }
           activeIcon={<Icon icon="zi-clock-1-solid" />}
         />
-
         <BottomNavigation.Item
           key="timeline"
-          label="Kế toán"
+          label="Giỏ hàng"
           icon={
             <div className="accounting-icon-wrapper">
               <Icon icon="zi-calendar" />
-              {/* {totalAccountTants > 0 && (
-                <div className="red-circle">{totalAccountTants}</div>
-              )} */}
             </div>
           }
           activeIcon={
             <div className="accounting-icon-wrapper">
               <Icon icon="zi-calendar-solid" />
-              {/* {totalAccountTants > 0 && (
-                <div className="red-circle">{totalAccountTants}</div>
-              )} */}
             </div>
           }
           onClick={() => {
@@ -179,21 +117,15 @@ const DetailHome = (props) => {
         />
         <BottomNavigation.Item
           key="me"
-          label="Học vụ"
+          label="Cá nhân"
           icon={
             <div className="accounting-icon-wrapper">
               <Icon icon="zi-user" />
-              {/* {totalAcademics > 0 && (
-                <div className="red-circle">{totalAcademics}</div>
-              )} */}
             </div>
           }
           activeIcon={
             <div className="accounting-icon-wrapper">
               <Icon icon="zi-user-solid" />
-              {/* {totalAcademics > 0 && (
-                <div className="red-circle">{totalAcademics}</div>
-              )} */}
             </div>
           }
           onClick={() => {
@@ -213,62 +145,38 @@ const DetailHome = (props) => {
               text: (
                 <div className="accounting-icon-wrapper">
                   <span>Thời khóa biểu</span>
-                  {/* {totalSchedules > 0 && (
-                    <div className="red-box-notice">{totalSchedules}</div>
-                  )} */}
                 </div>
               ),
-              onClick: () => {
-                navigate("/TimeTable", { state: { studentGuid } });
-              },
+              onClick: () => navigate("/TimeTable"),
             },
             {
               text: (
                 <div className="accounting-icon-wrapper">
                   <span>Bảng điểm</span>
-                  {/* {totalTranscripts > 0 && (
-                    <div className="red-box-notice">{totalTranscripts}</div>
-                  )} */}
                 </div>
               ),
-              onClick: () => {
-                navigate("/transcript", {
-                  state: { studentGuid },
-                });
-              },
+              onClick: () => navigate("/transcript"),
             },
             {
               text: (
                 <div className="accounting-icon-wrapper">
                   <span>Điểm danh</span>
-                  {/* {totalAttendances > 0 && (
-                    <div className="red-box-notice">{totalAttendances}</div>
-                  )} */}
                 </div>
               ),
-              onClick: () => {
-                navigate("/dayscorses", { state: { studentGuid } });
-              },
+              onClick: () => navigate("/dayscorses"),
             },
             {
               text: (
                 <div className="accounting-icon-wrapper">
                   <span>Lộ trình học tập</span>
-                  {/* {totalAttendances > 0 && (
-                    <div className="red-box-notice">{totalAttendances}</div>
-                  )} */}
                 </div>
               ),
-              onClick: () => {
-                navigate("/routerstudent", { state: { studentGuid } });
-              },
+              onClick: () => navigate("/routerstudent"),
             },
           ],
           [{ text: "Thoát", close: true }],
         ]}
       />
-
-      {/* //Acount  */}
       <Sheet.Actions
         mask
         visible={actionSheetAcount}
@@ -281,27 +189,17 @@ const DetailHome = (props) => {
               text: (
                 <div className="accounting-icon-wrapper">
                   <span>Phiếu thu học phí</span>
-                  {/* {totalTuitions > 0 && (
-                    <span className="red-box-notice">{totalTuitions}</span>
-                  )} */}
                 </div>
               ),
-              onClick: () => {
-                navigate("/account", { state: { studentGuid } });
-              },
+              onClick: () => navigate("/account"),
             },
             {
               text: (
                 <div className="accounting-icon-wrapper">
                   <span>Hóa đơn tài chính</span>
-                  {/* {totalRegisters > 0 && (
-                    <span className="red-box-notice">{totalRegisters}</span>
-                  )} */}
                 </div>
               ),
-              onClick: () => {
-                navigate("/finanial", { state: { studentGuid } });
-              },
+              onClick: () => navigate("/finanial"),
             },
           ],
           [{ text: "Thoát", close: true }],
@@ -311,4 +209,4 @@ const DetailHome = (props) => {
   );
 };
 
-export default DetailHome;
+export default Home;

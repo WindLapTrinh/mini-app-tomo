@@ -1,0 +1,58 @@
+/* swiper-slide styling */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling cho item trong slider */
+.slider-item-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px; /* Khoảng cách giữa các item */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    /* Kích thước tùy chỉnh nếu cần */
+}
+
+/* Phần tử chứa sản phẩm */
+.category-product, .category-store {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap; /* Ngăn các item bị gãy xuống dòng */
+}
+
+/* Container Swiper */
+.category-store .swiper-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Styling cho slide trong Swiper */
+.category-store .swiper-slide {
+    display: inline-block;
+}
+
+/* Styling cho màu chữ xám */
+.text-gray {
+    color: gray;
+}
+
+/* Styling cho chữ gạch ngang */
+.line-through {
+    text-decoration: line-through;
+}
+
+/* Styling cho giá giảm */
+.discount-price {
+    color: red; /* Điều chỉnh màu sắc nếu cần */
+}
+
+/* Styling cho hình ảnh */
+.border-image {
+    width: 250px !important; /* Đảm bảo kích thước phù hợp */
+    border-radius: 8px; /* Điều chỉnh nếu cần */
+}

@@ -1,28 +1,28 @@
-.zaui-routes-item {
-  padding: 10px !important;
+.zaui-routes-item{
+  background: #fff !important;
+  padding:10px;
 }
-.zaui-text-title-small {
-  float: left;
-}
-.zaui-routes {
-  background-color: #fff !important;
-}
-
-/*service store */
+/* service store */
 .service-store {
   background: #fff !important;
   color: #8861bb;
   width: 100%;
   border-radius: 5px;
-  height: 100px;
+  height: 86px;
 }
+
 .service-store {
   width: 100%;
   overflow-x: scroll;
   white-space: nowrap;
 }
-
+.category-store::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn ngang */
+}
 .service-store::-webkit-scrollbar {
+  display: none; /* Ẩn thanh cuộn ngang */
+}
+.category-store::-webkit-scrollbar-thumb {
   display: none; /* Ẩn thanh cuộn ngang */
 }
 
@@ -34,7 +34,6 @@
   flex: 0 0 auto;
   margin-right: 16px; /* Adjust the gap between items as needed */
 }
-/* end service store */
 
 /* category product */
 .category-product {
@@ -53,17 +52,11 @@
   padding: 4px;
   border-radius: 50px;
 }
+
 .text-gray {
   color: gray; 
 }
+
 .grid-cols-auto {
   display: grid;
 }
-/* end category product */
-
-
-
-
-
-
-

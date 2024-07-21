@@ -1,0 +1,12 @@
+/* detailHome.css */
+.grid {
+    display: grid;
+    gap: 16px;
+  }
+  
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.list-product{
+    margin-bottom: 50px !important;
+}  
