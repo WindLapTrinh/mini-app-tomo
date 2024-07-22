@@ -4,7 +4,7 @@
 .product-detail {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,6 @@
   
   .product-name {
     font-size: 18px;
-    font-weight: bold;
     margin-bottom: 10px;
   }
   
@@ -52,7 +51,8 @@
   }
   
   .add-to-cart-button:hover {
-    background: #2980b9;
+    background: #85f392;
+    transition: 0.5s;
   }
   
   .related-products {
@@ -60,8 +60,7 @@
   }
   
   .related-products-title {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
     margin-bottom: 20px;
   }
   
@@ -75,6 +74,7 @@
     display: inline-block;
     width: 200px;
     margin-right: 20px;
+    margin-bottom: 20px;
   }
   
   .related-product-item img {
@@ -91,4 +91,14 @@
     font-size: 14px;
     color: #e74c3c;
   }
+  .related-products-list::-webkit-scrollbar {
+    height: 3px; /* Set height of horizontal scrollbar */
+  }
+  
+  .related-products-list::-webkit-scrollbar-thumb {
+    background-color: #00b815; /* Color of the scrollbar handle */
+  }
+ 
+  
+ 
   

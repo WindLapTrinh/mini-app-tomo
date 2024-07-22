@@ -15,6 +15,9 @@ import {
 import "../../css/detailHome.css";
 import CategoryProduct from "@/pages/home/CategoryProduct";
 import ProductList from "@/pages/home/ProductList";
+import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import SetTitleHeader from "@/pages/shared/hooks/SetTitleHeader";
+
 
 const categories = [
   { id: 1, name: "Sản phẩm 1", icon: "/images/banner-1.jpg" },
@@ -24,16 +27,12 @@ const categories = [
 ];
 
 const products = [
-  { id: 1, name: "Product 1", image: "/images/product-1.jpg" },
-  { id: 2, name: "Product 2", image: "/images/product-2.jpg" },
-  { id: 3, name: "Product 3", image: "/images/product-3.jpg" },
-  { id: 4, name: "Product 4", image: "/images/product-4.jpg" },
-  { id: 5, name: "Product 5", image: "/images/product-5.jpg" },
-  { id: 6, name: "Product 6", image: "/images/product-6.jpg" },
-  { id: 7, name: "Product 7", image: "/images/product-7.jpg" },
-  { id: 8, name: "Product 8", image: "/images/product-8.jpg" },
-  { id: 9, name: "Product 9", image: "/images/product-9.jpg" },
-  { id: 10, name: "Product 10", image: "/images/product-10.jpg" },
+  { id: 1, name: "Thịt heo", image: "/images/thit-heo.png" },
+  { id: 2, name: "Bánh kẹo", image: "/images/banh-keo-cac-loai.png" },
+  { id: 3, name: "Rau củ", image: "/images/rau-cu-trai-cay.png" },
+  { id: 4, name: "Cá hải sản", image: "/images/ca-hai-san.png" },
+  { id: 5, name: "Giạo các loại", image: "/images/gao-cac-loai.png" },
+  { id: 6, name: "Trái cây", image: "/images/trai-cay-cac-loai.png" },
 ];
 
 const gotoCategory = (id) => {
@@ -42,16 +41,14 @@ const gotoCategory = (id) => {
 
 const Home = (props) => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("chat");
-  const [actionSheetVisible, setActionSheetVisible] = useState(false);
-  const [actionSheetAcount, setActionSheetAcount] = useState(false);
-
-  const openChatScreen = () => {
-    console.log("Open Chat Screen");
-  };
+  
   const handleCategory = () => {
     navigate("/categoryByProduct");
   };
+
+  SetTitleHeader({
+    title: "Shop Yogo"
+  });
 
   return (
     <Page className="">
@@ -104,136 +101,7 @@ const Home = (props) => {
         <ProductList />
       </Box>
 
-      <BottomNavigation
-        fixed
-        activeKey={activeTab}
-        onChange={(key) => setActiveTab(key)}
-        style={{ marginTop: "56px" }}
-      >
-        <BottomNavigation.Item
-          key="chat"
-          label="Tin Nhắn"
-          icon={<Icon icon="zi-chat" />}
-          activeIcon={<Icon icon="zi-chat-solid" />}
-          onClick={openChatScreen}
-        />
-        <BottomNavigation.Item
-          label="Thông báo"
-          key="contact"
-          icon={
-            <div className="accounting-icon-wrapper">
-              <Icon icon="zi-clock-1" />
-            </div>
-          }
-          activeIcon={<Icon icon="zi-clock-1-solid" />}
-        />
-        <BottomNavigation.Item
-          key="timeline"
-          label="Giỏ hàng"
-          icon={
-            <div className="accounting-icon-wrapper">
-              <Icon icon="zi-calendar" />
-            </div>
-          }
-          activeIcon={
-            <div className="accounting-icon-wrapper">
-              <Icon icon="zi-calendar-solid" />
-            </div>
-          }
-          onClick={() => {
-            setActionSheetAcount(true);
-          }}
-        />
-        <BottomNavigation.Item
-          key="me"
-          label="Cá nhân"
-          icon={
-            <div className="accounting-icon-wrapper">
-              <Icon icon="zi-user" />
-            </div>
-          }
-          activeIcon={
-            <div className="accounting-icon-wrapper">
-              <Icon icon="zi-user-solid" />
-            </div>
-          }
-          onClick={() => {
-            setActionSheetVisible(true);
-          }}
-        />
-      </BottomNavigation>
-      <Sheet.Actions
-        mask
-        visible={actionSheetVisible}
-        title="Phụ huynh có thể vào đây xem thông tin học sinh"
-        onClose={() => setActionSheetVisible(false)}
-        swipeToClose
-        actions={[
-          [
-            {
-              text: (
-                <div className="accounting-icon-wrapper">
-                  <span>Thời khóa biểu</span>
-                </div>
-              ),
-              onClick: () => navigate("/TimeTable"),
-            },
-            {
-              text: (
-                <div className="accounting-icon-wrapper">
-                  <span>Bảng điểm</span>
-                </div>
-              ),
-              onClick: () => navigate("/transcript"),
-            },
-            {
-              text: (
-                <div className="accounting-icon-wrapper">
-                  <span>Điểm danh</span>
-                </div>
-              ),
-              onClick: () => navigate("/dayscorses"),
-            },
-            {
-              text: (
-                <div className="accounting-icon-wrapper">
-                  <span>Lộ trình học tập</span>
-                </div>
-              ),
-              onClick: () => navigate("/routerstudent"),
-            },
-          ],
-          [{ text: "Thoát", close: true }],
-        ]}
-      />
-      <Sheet.Actions
-        mask
-        visible={actionSheetAcount}
-        title="Vào đây xem thông tin thiếu đăng ký và học phí"
-        onClose={() => setActionSheetAcount(false)}
-        swipeToClose
-        actions={[
-          [
-            {
-              text: (
-                <div className="accounting-icon-wrapper">
-                  <span>Phiếu thu học phí</span>
-                </div>
-              ),
-              onClick: () => navigate("/account"),
-            },
-            {
-              text: (
-                <div className="accounting-icon-wrapper">
-                  <span>Hóa đơn tài chính</span>
-                </div>
-              ),
-              onClick: () => navigate("/finanial"),
-            },
-          ],
-          [{ text: "Thoát", close: true }],
-        ]}
-      />
+      <CustomBottomNavigation/>
     </Page>
   );
 };

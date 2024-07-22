@@ -10,7 +10,7 @@ const ProductItem = ({ product }) => {
   };
 
   return (
-    <div className="space-y-2" onClick={handleDetailProduct}>
+    <div className="space-y-2 product-index" onClick={handleDetailProduct}>
       <Box className="w-full aspect-square relative">
         <img
           loading="lazy"
@@ -21,7 +21,8 @@ const ProductItem = ({ product }) => {
       </Box>
       <Text>{product.name}</Text>
       <Text size="xxSmall" className="text-gray pb-2">
-        {product.price} VND
+        <span className="product-price">{product.price} VND</span>
+        <span className="product-sold">Đã bán{product.sold}</span>
       </Text>
     </div>
   );

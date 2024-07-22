@@ -66,3 +66,11 @@
 .grid-cols-auto {
   display: grid;
 }
+.btn-cart{
+  background-color: red;
+  color: #ffffff;
+}
+.icon-active{
+  color: #00b815 !important;
+}
+
