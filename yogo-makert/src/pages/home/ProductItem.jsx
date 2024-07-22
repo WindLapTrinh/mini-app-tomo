@@ -1,9 +1,16 @@
 import React from "react";
 import { Box, Text } from "zmp-ui";
+import { useNavigate } from "react-router-dom";
 
 const ProductItem = ({ product }) => {
+  const navigate = useNavigate();
+
+  const handleDetailProduct = () => {
+    navigate("/detailProduct");
+  };
+
   return (
-    <div className="space-y-2">
+    <div className="space-y-2" onClick={handleDetailProduct}>
       <Box className="w-full aspect-square relative">
         <img
           loading="lazy"

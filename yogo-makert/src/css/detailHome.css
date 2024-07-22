@@ -1,14 +1,20 @@
-.zaui-routes-item{
-  background: #fff !important;
+.header-home{
+  background: linear-gradient(to bottom, rgb(7 163 25),rgb(182, 244, 187));
   padding:10px;
+  border-bottom: 1px solid #c6c5c5;
 }
 /* service store */
 .service-store {
   background: #fff !important;
-  color: #8861bb;
-  width: 100%;
-  border-radius: 5px;
-  height: 86px;
+    color: #ccc;
+    border-radius: 5px;
+    height: 90px;
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
 }
 
 .service-store {
