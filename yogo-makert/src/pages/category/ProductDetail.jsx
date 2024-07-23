@@ -10,6 +10,7 @@ import {
   Input,
 } from "zmp-ui";
 import ProductList from "../home/ProductList.jsx";
+import SliderCategory from "./SliderCategory.jsx";
 import CustomBottomNavigation from "../../components/layout/CustomBottomNavigation.jsx";
 import "../../css/detailhome/product/productDetail.css";
 
@@ -62,31 +63,7 @@ const ProductDetail = () => {
 
   return (
     <Box className="container-product">
-      <Box className="product-image">
-        <Swiper className="product-item">
-          <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/product/veg-detail-1.jpg"
-              alt="slide-1"
-            />
-          </Swiper.Slide>
-          <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/product/veg-detail-2.jpg"
-              alt="slide-2"
-            />
-          </Swiper.Slide>
-          <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/product/veg-detail-3.jpg"
-              alt="slide-3"
-            />
-          </Swiper.Slide>
-        </Swiper>
-      </Box>
+      <SliderCategory />
       <Box className="product-detail">
         <Box className="product-info">
           <Text className="product-name">{product.name}</Text>
@@ -97,7 +74,7 @@ const ProductDetail = () => {
           </Button>
         </Box>
         <Box className="related-products">
-          <Text className="related-products-title">Rau cải bẹ</Text>
+          <Text className="related-products-title">Sản phẩm liên quan</Text>
           <Box className="related-products-list">
             {product.relatedProducts.map((relatedProduct) => (
               <Box key={relatedProduct.id} className="related-product-item">
@@ -154,7 +131,8 @@ const ProductDetail = () => {
             >
               -
             </Button>
-            Số lượng:<Input
+            Số lượng:
+            <Input
               type="number"
               value={quantity}
               onChange={(e) => setQuantity(Number(e.target.value))}

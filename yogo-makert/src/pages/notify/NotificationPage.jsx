@@ -17,12 +17,12 @@ const notifications = [
 ];
 
 const NotificationPage = () => {
-  const location = useLocation();
-  const { keyTab } = location.state || { keyTab}; 
-
   SetTitleHeader({
     title: "Notification list",
   });
+  const location = useLocation();
+  
+  const { keyTab } = location.state || { keyTab}; 
 
   return (
     <Box className="notification-page">

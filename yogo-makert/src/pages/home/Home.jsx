@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
 import {
   BottomNavigation,
   Box,
@@ -15,9 +13,12 @@ import {
 import "../../css/detailHome.css";
 import CategoryProduct from "@/pages/home/CategoryProduct";
 import ProductList from "@/pages/home/ProductList";
+import Slider from "@/pages/home/Slider";
+import Search from "@/pages/home/Search";
+import ServiceStore from "@/pages/home/ServiceStore";
+
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
-
 
 const categories = [
   { id: 1, name: "Sản phẩm 1", icon: "/images/banner-1.jpg" },
@@ -34,7 +35,6 @@ const products = [
   { id: 5, name: "Seafood", image: "/images/category/seafood.jpg" },
   { id: 6, name: "Rice", image: "/images/category/rice.jpg" },
   { id: 7, name: "Beer", image: "/images/category/beer.jpg" },
-  
 ];
 
 const gotoCategory = (id) => {
@@ -42,68 +42,32 @@ const gotoCategory = (id) => {
 };
 
 const Home = (props) => {
-  const navigate = useNavigate();
-  
-  const handleCategory = () => {
-    navigate("/categoryByProduct");
-  };
-
   SetTitleHeader({
-    title: "Shop Yogo"
+    title: "Shop Tomo Makert",
   });
+  const navigate = useNavigate();
+
+  const handleServiceStoreClick = (id) => {
+    console.log("Category clicked:", id);
+    navigate(`/categoryByProduct`);
+  };
 
   return (
     <Page className="">
       <Box className="header-home">
-        <Box mt={2} flex justifyContent="center" alignItems="center">
-          <Swiper>
-              {/* <Swiper.Slide>
-                <img
-                  className="slide-img"
-                  src="/images/banner/banner-one.png"
-                  alt="slide-2"
-                />
-              </Swiper.Slide> */}
-            <Swiper.Slide>
-              <img
-                className="slide-img"
-                src="/images/banner/banner-two.jpg"
-                alt="slide-2"
-              />
-            </Swiper.Slide>
-          </Swiper>
-        </Box>
-        <Box mt={2} mb={2}>
-          <Input.Search placeholder="search product" size="small" />
-        </Box>
-        <Box mt={2} className="service-store">
-          <Box className="slider-container bg-white p-4">
-            {products.map((product) => (
-              <div
-                key={product.id}
-                className="slider-item flex flex-col space-y-2 items-center"
-                onClick={handleCategory}
-              >
-                <img
-                  className="w-12 h-12 boder-image"
-                  src={product.image}
-                  alt={product.name}
-                />
-                <Text size="xxSmall" className="text-gray">
-                  {product.name}
-                </Text>
-              </div>
-            ))}
-          </Box>
-        </Box>
+        <Slider />
+        <Search />
+        <ServiceStore
+          products={products}
+          onServiceStoreClick={handleServiceStoreClick}
+        />
         <CategoryProduct categories={categories} gotoCategory={gotoCategory} />
       </Box>
-      <hr />
       <Box>
         <ProductList />
       </Box>
 
-      <CustomBottomNavigation/>
+      <CustomBottomNavigation />
     </Page>
   );
 };

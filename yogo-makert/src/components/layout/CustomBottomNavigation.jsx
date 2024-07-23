@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsCart, BsHouse } from "react-icons/bs";
-
+import "../../css/detailhome/bottomNavigation.css"
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -32,7 +32,6 @@ const CustomBottomNavigation = () => {
       fixed
       activeKey={activeTab}
       onChange={(key) => setActiveTab(key)}
-      style={{ marginTop: "56px" }}
     >
      <BottomNavigation.Item
         className={activeTab === "home" ? "icon-active" : ""}
