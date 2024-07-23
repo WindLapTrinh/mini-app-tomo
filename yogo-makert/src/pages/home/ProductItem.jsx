@@ -22,7 +22,7 @@ const ProductItem = ({ product }) => {
       <Text>{product.name}</Text>
       <Text size="xxSmall" className="text-gray pb-2">
         <span className="product-price">{product.price} VND</span>
-        <span className="product-sold">Đã bán{product.sold}</span>
+        <span className="product-sold">Đã bán {product.sold}</span>
       </Text>
     </div>
   );

@@ -5,8 +5,8 @@
 }
 /* service store */
 .service-store {
-  background: #fff !important;
-    color: #ccc;
+  background: #ffffff !important;
+    color: black;
     border-radius: 5px;
     height: 90px;
     width: 100%;
@@ -21,6 +21,7 @@
   width: 100%;
   overflow-x: scroll;
   white-space: nowrap;
+
 }
 .category-store::-webkit-scrollbar {
   display: none; /* Ẩn thanh cuộn ngang */
@@ -54,8 +55,6 @@
 }
 
 .boder-image {
-  border: 1px solid #ddd;
-  padding: 4px;
   border-radius: 50px;
 }
 

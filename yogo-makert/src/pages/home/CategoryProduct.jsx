@@ -3,16 +3,16 @@ import React from "react";
 import { Box, Text } from "zmp-ui";
 
 const categories = [
-  { id: 1, name: "Category One", image: "/images/product2.jpg" },
-  { id: 2, name: "Category Two", image: "/images/product2.jpg" },
-  { id: 3, name: "Category Three", image: "/images/product2.jpg" },
-  { id: 4, name: "Category Four", image: "/images/product2.jpg" },
-  { id: 5, name: "Category Five", image: "/images/product2.jpg" },
-  { id: 6, name: "Category Six", image: "/images/product2.jpg" },
-  { id: 7, name: "Category Seven", image: "/images/product2.jpg" },
-  { id: 8, name: "Category Eight", image: "/images/product2.jpg" },
-  { id: 9, name: "Category Nine", image: "/images/product2.jpg" },
-  { id: 10, name: "Category Ten", image: "/images/product2.jpg" },
+  { id: 1, name: "Thịt xay", image: "/images/product/flesh-1.jpg", price:"$2000" },
+  { id: 2, name: "Bẹ sườn", image: "/images/product/flesh-2.jpg", price:"$342000" },
+  { id: 3, name: "Tôm thẻ", image: "/images/product/seafood-1.jpg", price:"$678000" },
+  { id: 4, name: "Gà H'Mông", image: "/images/product/flesh-3.jpg", price:"$78000" },
+  { id: 5, name: "Mực na", image: "/images/product/seafood-2.jpg", price:"$342000" },
+  { id: 6, name: "Thịt vụn bò", image: "/images/product/flesh-4.jpg", price:"$12000" },
+  { id: 7, name: "Hàu sashiml", image: "/images/product/seafood-3.jpg", price:"$6000" },
+  { id: 8, name: "Cá Basa", image: "/images/product/flesh-5.jpg", price:"$4800" },
+  { id: 9, name: "Mực nút", image: "/images/product/seafood-4.jpg", price:"$2300" },
+  { id: 10, name: "Mực ống", image: "/images/product/seafood-5.jpg", price:"$20600" },
 ];
 
 const CategoryProduct = () => {
@@ -32,7 +32,8 @@ const CategoryProduct = () => {
               alt={category.name}
             />
             <Text size="xxSmall" className="custom-text-gray">
-              {category.name}
+              <span className="name-product-today">{category.name}</span>
+              <span className="price-product-today">{category.price}</span>
             </Text>
           </div>
         ))}

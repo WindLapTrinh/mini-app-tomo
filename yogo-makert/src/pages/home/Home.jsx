@@ -16,7 +16,7 @@ import "../../css/detailHome.css";
 import CategoryProduct from "@/pages/home/CategoryProduct";
 import ProductList from "@/pages/home/ProductList";
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
-import SetTitleHeader from "@/pages/shared/hooks/SetTitleHeader";
+import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 
 
 const categories = [
@@ -27,12 +27,14 @@ const categories = [
 ];
 
 const products = [
-  { id: 1, name: "Thịt heo", image: "/images/thit-heo.png" },
-  { id: 2, name: "Bánh kẹo", image: "/images/banh-keo-cac-loai.png" },
-  { id: 3, name: "Rau củ", image: "/images/rau-cu-trai-cay.png" },
-  { id: 4, name: "Cá hải sản", image: "/images/ca-hai-san.png" },
-  { id: 5, name: "Giạo các loại", image: "/images/gao-cac-loai.png" },
-  { id: 6, name: "Trái cây", image: "/images/trai-cay-cac-loai.png" },
+  { id: 1, name: "Flesh", image: "/images/category/flesh.jpg" },
+  { id: 2, name: "Snacks", image: "/images/category/snacks.jpg" },
+  { id: 3, name: "Vegetables", image: "/images/category/vegetables.jpg" },
+  { id: 4, name: "Fruit", image: "/images/category/fruit.jpg" },
+  { id: 5, name: "Seafood", image: "/images/category/seafood.jpg" },
+  { id: 6, name: "Rice", image: "/images/category/rice.jpg" },
+  { id: 7, name: "Beer", image: "/images/category/beer.jpg" },
+  
 ];
 
 const gotoCategory = (id) => {
@@ -55,17 +57,17 @@ const Home = (props) => {
       <Box className="header-home">
         <Box mt={2} flex justifyContent="center" alignItems="center">
           <Swiper>
+              {/* <Swiper.Slide>
+                <img
+                  className="slide-img"
+                  src="/images/banner/banner-one.png"
+                  alt="slide-2"
+                />
+              </Swiper.Slide> */}
             <Swiper.Slide>
               <img
                 className="slide-img"
-                src="/images/anh_1.jpg"
-                alt="slide-2"
-              />
-            </Swiper.Slide>
-            <Swiper.Slide>
-              <img
-                className="slide-img"
-                src="/images/anh_2.jpg"
+                src="/images/banner/banner-two.jpg"
                 alt="slide-2"
               />
             </Swiper.Slide>

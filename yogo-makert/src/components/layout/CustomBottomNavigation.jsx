@@ -1,18 +1,32 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
-import { BsCart } from "react-icons/bs";
+import { BsCart, BsHouse } from "react-icons/bs";
 
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState("chat");
+  const location = useLocation();
+  const { keyTab } = location.state || {};
 
-  const openChatScreen = () => {
-    console.log("Open Chat Screen");
+  const [activeTab, setActiveTab] = useState(keyTab || "home");
+
+  const handleHome = (keyTab) => {
+    navigate("/",{state : {keyTab}});
+    console.log("Tab active",keyTab)
+  }
+  const handleNotify = (keyTab) => {
+    navigate("/notificationPage", { state: { keyTab } });
+    console.log("Tab active", keyTab);
   };
-  const handleNotify = () => {
-    navigate("/notificationPage");
-  };
+  const handleCart = (keyTab) => {
+    navigate("/homeCart", {state : {keyTab}});
+    console.log("Tab active", keyTab)
+  }
+  const handleContactUser = (keyTab) => {
+    navigate("/contactUser",{state : {keyTab}});
+    console.log("Tab active",keyTab)
+  }
+
   return (
     <BottomNavigation
       fixed
@@ -20,13 +34,23 @@ const CustomBottomNavigation = () => {
       onChange={(key) => setActiveTab(key)}
       style={{ marginTop: "56px" }}
     >
-      <BottomNavigation.Item
-        className={activeTab === "chat" ? "icon-active" : ""}
-        key="chat"
-        label="Tin Nhắn"
-        icon={<Icon icon="zi-chat" />}
-        activeIcon={<Icon icon="zi-chat-solid" />}
-        onClick={openChatScreen}
+     <BottomNavigation.Item
+        className={activeTab === "home" ? "icon-active" : ""}
+        key="home"
+        label="Home"
+        icon={
+          <div className="accounting-icon-wrapper">
+            <BsHouse />
+          </div>
+        }
+        activeIcon={
+          <div className="accounting-icon-wrapper">
+            <BsHouse />
+          </div>
+        }
+        onClick={() => {
+           handleHome("home");
+        }}
       />
       <BottomNavigation.Item
         className={activeTab === "contact" ? "icon-active" : ""}
@@ -39,7 +63,7 @@ const CustomBottomNavigation = () => {
         }
         activeIcon={<Icon icon="zi-clock-1-solid" />}
         onClick={() => {
-          handleNotify();
+          handleNotify("contact");
         }}
       />
       <BottomNavigation.Item
@@ -48,21 +72,21 @@ const CustomBottomNavigation = () => {
         label="Giỏ hàng"
         icon={
           <div className="accounting-icon-wrapper">
-                <BsCart />
-                </div>
+            <BsCart />
+          </div>
         }
         activeIcon={
           <div className="accounting-icon-wrapper">
-                <BsCart />
-                </div>
+            <BsCart />
+          </div>
         }
         onClick={() => {
-          // Handle click for Giỏ hàng
+           handleCart("cart");
         }}
       />
       <BottomNavigation.Item
-        className={activeTab === "customer" ? "icon-active" : ""}
-        key="customer"
+        className={activeTab === "user" ? "icon-active" : ""}
+        key="user"
         label="Cá nhân"
         icon={
           <div className="accounting-icon-wrapper">
@@ -75,7 +99,7 @@ const CustomBottomNavigation = () => {
           </div>
         }
         onClick={() => {
-          // Handle click for Cá nhân
+          handleContactUser("user")
         }}
       />
     </BottomNavigation>

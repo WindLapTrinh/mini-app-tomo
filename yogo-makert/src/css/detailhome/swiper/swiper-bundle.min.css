@@ -35,7 +35,20 @@
     border-radius: 5px;
     background: #ffffff;
     padding: 6px;
+    width: 132px;
   }
   .title-product{
     color:#ffffff;
+  }
+  .custom-border-image{
+    width: 114px;
+  }
+  .name-product-today{
+    float: left;
+    margin-right: 8px;
+  }
+  .price-product-today{
+    float: right;
+    color: #00b815;
+    font-weight: bold;
   }
