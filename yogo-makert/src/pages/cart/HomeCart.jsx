@@ -5,7 +5,7 @@ import ShippingInfo from "./ShippingInfo";
 import PaymentDetail from "./PaymentDetail";
 import OrderProduct from "./OrderProduct";
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
-
+import InfomationVoucher from "./InfomationVoucher";
 import "../../css/cart/homeCart.css";
 import "../../css/cart/shippingInformation.css";
 
@@ -80,6 +80,7 @@ const HomeCart = () => {
           ))}
         </Box>
         <ShippingInfo />
+        <InfomationVoucher/>
         <PaymentDetail />
       </Box>
       <OrderProduct />

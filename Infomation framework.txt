@@ -1,0 +1,3 @@
+/*Config framework */
+1. Silder
+npm install swiper

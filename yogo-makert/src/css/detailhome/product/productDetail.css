@@ -141,6 +141,12 @@
     float: left;
   }
   /* end css add cart  */
+  .icon-related-products{
+    float: left;
+    color: #00b815;
+    font-size: 18px;
+    margin-right: 8px;
+  }
 
  
   

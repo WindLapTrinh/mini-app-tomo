@@ -1,4 +1,7 @@
 /* service store */
+.detail-service{
+ padding: 10px 10px 0px 10px;
+}
 .service-store {
     background: #ffffff !important;
       color: black;
@@ -16,7 +19,6 @@
     width: 100%;
     overflow-x: scroll;
     white-space: nowrap;
-  
   }
   .category-store::-webkit-scrollbar {
     display: none; /* Ẩn thanh cuộn ngang */
@@ -39,4 +41,7 @@
   .boder-image {
     border-radius: 50px !important;
   }
-  
+  .text-service{
+    font-weight: 500;
+    color: black;
+  }

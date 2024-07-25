@@ -1,6 +1,5 @@
 .header-home{
   background: linear-gradient(to bottom, rgb(7 163 25),rgb(182, 244, 187));
-  padding:10px;
   border-bottom: 1px solid #c6c5c5;
 }
 
@@ -31,3 +30,4 @@
   color: #00b815 !important;
 }
 
+/* slider */

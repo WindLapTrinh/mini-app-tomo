@@ -1,8 +1,14 @@
 import React from "react";
 import { List, Icon, Box, Text } from "zmp-ui";
+import { useNavigate } from "react-router-dom";
 import "../../css/cart/shippingInformation.css";
 
 const ShippingInfo = () => {
+  const navigate = useNavigate();
+  const handleAddress = () => {
+    navigate("/addressCart");
+  }
+
   return (
     <Box className="detail-shipping">
       <Box className="header-cart-product">
@@ -13,12 +19,12 @@ const ShippingInfo = () => {
           </Box>
       <Box className="shipping-info" mt={2}>
         <List>
-          <List.Item className="cart-address">
+          <List.Item className="cart-address" onClick={handleAddress}>
             <div className="list-item-content">
               <Icon icon="zi-location" className="list-item-icon" />
               <div className="item-details">
                 <div className="title-address-cart">
-                  Bạn chưa có thông tin địa chỉ
+                  Bạn chưa có thông tin địa chỉ 
                 </div>
                 <div className="item-description">Bấm vào đây bạn nhé</div>
               </div>

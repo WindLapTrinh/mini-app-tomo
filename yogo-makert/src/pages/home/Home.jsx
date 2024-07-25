@@ -14,8 +14,8 @@ import "../../css/detailHome.css";
 import CategoryProduct from "@/pages/home/CategoryProduct";
 import ProductList from "@/pages/home/ProductList";
 import Slider from "@/pages/home/Slider";
-import Search from "@/pages/home/Search";
 import ServiceStore from "@/pages/home/ServiceStore";
+import Introduce from "@/pages/home/Introduce";
 
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
@@ -35,6 +35,11 @@ const products = [
   { id: 5, name: "Seafood", image: "/images/category/seafood.jpg" },
   { id: 6, name: "Rice", image: "/images/category/rice.jpg" },
   { id: 7, name: "Beer", image: "/images/category/beer.jpg" },
+  { id: 9, name: "Flesh", image: "/images/category/flesh.jpg" },
+  { id: 9, name: "Snacks", image: "/images/category/snacks.jpg" },
+  { id: 10, name: "Vegetables", image: "/images/category/vegetables.jpg" },
+  { id: 11, name: "Fruit", image: "/images/category/fruit.jpg" },
+  { id: 12, name: "Seafood", image: "/images/category/seafood.jpg" },
 ];
 
 const gotoCategory = (id) => {
@@ -53,20 +58,20 @@ const Home = (props) => {
   };
 
   return (
-    <Page className="">
+    <Page className="home">
+
       <Box className="header-home">
-        <Slider />
-        <Search />
+        <Introduce/>
         <ServiceStore
           products={products}
           onServiceStoreClick={handleServiceStoreClick}
         />
-        <CategoryProduct categories={categories} gotoCategory={gotoCategory} />
+        <Slider />
+        <CategoryProduct/>
       </Box>
       <Box>
         <ProductList />
       </Box>
-
       <CustomBottomNavigation />
     </Page>
   );

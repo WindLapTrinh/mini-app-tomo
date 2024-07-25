@@ -1,3 +1,6 @@
+.product-today{
+  padding: 0px 10px 5px 10px;
+}
 .category-product {
     background: rgb(182, 244, 187);
     color: #333;
@@ -7,7 +10,7 @@
     height: 100%;
     overflow-x: scroll;
     white-space: nowrap;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 0px 10px 10px;
   }
   
   .category-product {
@@ -28,7 +31,6 @@
   
   .slider-item {
     flex: 0 0 auto;
-    margin-right: 16px; /* Adjust the gap between items as needed */
   }
   .category-item{
     margin-right: 10px;
@@ -51,4 +53,11 @@
     float: right;
     color: #00b815;
     font-weight: bold;
+  }
+  .icon-product-today{
+    float: left;
+    margin-right: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
   }

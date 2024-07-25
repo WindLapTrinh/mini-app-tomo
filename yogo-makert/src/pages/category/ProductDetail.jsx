@@ -12,6 +12,7 @@ import {
 import ProductList from "../home/ProductList.jsx";
 import SliderCategory from "./SliderCategory.jsx";
 import CustomBottomNavigation from "../../components/layout/CustomBottomNavigation.jsx";
+import { BsShop } from "react-icons/bs";
 import "../../css/detailhome/product/productDetail.css";
 
 const product = {
@@ -74,6 +75,7 @@ const ProductDetail = () => {
           </Button>
         </Box>
         <Box className="related-products">
+          <div className="icon-related-products"><BsShop/></div>
           <Text className="related-products-title">Sản phẩm liên quan</Text>
           <Box className="related-products-list">
             {product.relatedProducts.map((relatedProduct) => (
