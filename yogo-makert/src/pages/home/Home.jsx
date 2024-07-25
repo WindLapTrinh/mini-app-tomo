@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   BottomNavigation,
@@ -19,6 +19,7 @@ import Introduce from "@/pages/home/Introduce";
 
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
+import Popup from "@/pages/shared/pages/Popup";
 
 const categories = [
   { id: 1, name: "Sản phẩm 1", icon: "/images/banner-1.jpg" },
@@ -57,9 +58,24 @@ const Home = (props) => {
     navigate(`/categoryByProduct`);
   };
 
+  //popup
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    // Kiểm tra nếu popup đã được hiển thị trước đó
+    const popupShown = localStorage.getItem('popupShown');
+    if (!popupShown) {
+      setShowPopup(true);
+      // Đánh dấu popup đã được hiển thị
+      localStorage.setItem('popupShown', 'true');
+    }
+  }, []);
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  }
   return (
     <Page className="home">
-
+ <Popup show={showPopup} onClose={handleClosePopup} />
       <Box className="header-home">
         <Introduce/>
         <ServiceStore

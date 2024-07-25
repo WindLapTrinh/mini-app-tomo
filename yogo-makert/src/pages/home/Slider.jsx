@@ -23,7 +23,7 @@ const Slider = () => {
       <Swiper
         effect={"slide"} 
         autoplay={{
-          delay: "3000", 
+          delay: 3000, 
           disableOnInteraction: false,
         }}
         grabCursor={true}
