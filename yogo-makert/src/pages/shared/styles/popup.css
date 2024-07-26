@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Đảm bảo popup nằm trên các thành phần khác */
+    z-index: 2000; /* Đảm bảo popup nằm trên các thành phần khác */
   }
   
   .popup-content {
@@ -31,5 +31,7 @@
   }
   .image-popup{
     border-radius: 8px;
+    width: 300px;
+    height: 400px;
   }
   

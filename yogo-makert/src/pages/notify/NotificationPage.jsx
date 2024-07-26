@@ -44,9 +44,9 @@ const NotificationPage = () => {
             <Text className="notification-date" size="xSmall" color="gray">
               {notification.date}
             </Text>
-            <Button className="view-details-button" mt={2}>
+            {/* <Button className="view-details-button" mt={2}>
               View Detail
-            </Button>
+            </Button> */}
           </Box>
         ))}
       </Box>
