@@ -1,0 +1,37 @@
+/* detailHome.css */
+.grid {
+    display: grid;
+    gap: 16px;
+  }
+  
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.list-product{
+    margin-bottom: 50px !important;
+    padding:10px;
+    background: #ffffff;
+} 
+.product-index{
+    padding: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+    border-radius: 10px;
+} 
+.price-item{
+    float: left;
+    color: #00b815;
+  }
+ .product-sold{
+    float: right;
+ }
+ .descript-product{
+    padding:10px;
+ }
+ .icon-list-product{
+    float: left;
+    margin-right: 5px;
+    color: #ff0220;
+    font-weight: 500;
+    font-size: 20px;
+ }

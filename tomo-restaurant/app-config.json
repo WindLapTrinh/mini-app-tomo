@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Wind Restaurant",
+    "headerTitle": "Wind Restaurant",
+    "headerColor": "#a81e1e",
+    "textColor": "white",
+    "statusBarColor": "#a81e1e",
+    "leftButton": "back",
+    "statusBar": "normal",
+    "actionBarHidden": false,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": []
+}
