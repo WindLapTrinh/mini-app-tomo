@@ -6,7 +6,7 @@ import "../../css/cart/prurchaseHistory.css";
 
 const PurchaseHistory = () => {
   SetTitleHeader({
-    title: "Purchase history"
+    title: "Lịch sử của bạn"
   })
   const [selectedIndex, setSelectedIndex] = useState(null);
 
@@ -20,17 +20,15 @@ const PurchaseHistory = () => {
         <Box className="slider-history bg-white p-4">
           <div className="tabs-wrapper">
             <Tabs className="horizontal-tabs" id="purchase-history-tabs" scrollable="true">
-              <Tabs.Tab key="tab1" label="All Purchases">
+              <Tabs.Tab key="tab1" label="Tất cả đơn hàng">
               </Tabs.Tab>
-              <Tabs.Tab key="tab2" label="Pending">
+              <Tabs.Tab key="tab2" label="Đang sử lý">
               </Tabs.Tab>
-              <Tabs.Tab key="tab3" label="Delivering">
+              <Tabs.Tab key="tab3" label="Đã hủy">
               </Tabs.Tab>
-              <Tabs.Tab key="tab4" label="Completed">
+              <Tabs.Tab key="tab4" label="Đang vận chuyển">
               </Tabs.Tab>
-              <Tabs.Tab key="tab5" label="Cancelled">
-              </Tabs.Tab>
-              <Tabs.Tab key="tab6" label="Returns">
+              <Tabs.Tab key="tab5" label="Thành công">
               </Tabs.Tab>
             </Tabs>
           </div>

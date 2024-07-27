@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
-import { BsCart, BsHouse } from "react-icons/bs";
+import {BsCart, BsHouse } from "react-icons/bs";
+import { BiDish } from "react-icons/bi";
 import "../../css/detailhome/bottomNavigation.css"
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
@@ -18,6 +19,9 @@ const CustomBottomNavigation = () => {
     navigate("/notificationPage", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
+  const handleBooking =(keyTab) => {
+    navigate("/booking", {state : {keyTab}});
+  }
   const handleCart = (keyTab) => {
     navigate("/homeCart", {state : {keyTab}});
     console.log("Tab active", keyTab)
@@ -36,7 +40,7 @@ const CustomBottomNavigation = () => {
      <BottomNavigation.Item
         className={activeTab === "home" ? "icon-active" : ""}
         key="home"
-        label="Home"
+        label="Trang chủ"
         icon={
           <div className="accounting-icon-wrapper">
             <BsHouse />
@@ -63,6 +67,24 @@ const CustomBottomNavigation = () => {
         activeIcon={<Icon icon="zi-clock-1-solid" />}
         onClick={() => {
           handleNotify("contact");
+        }}
+      />
+      <BottomNavigation.Item
+        className={activeTab === "booking" ? "icon-active" : ""}
+        key="booking"
+        label="Đặt bạn"
+        icon={
+          <div className="accounting-icon-wrapper">
+            <BiDish />
+          </div>
+        }
+        activeIcon={
+          <div className="accounting-icon-wrapper">
+            <BiDish />
+          </div>
+        }
+        onClick={() => {
+          handleBooking("booking");
         }}
       />
       <BottomNavigation.Item

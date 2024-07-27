@@ -12,6 +12,7 @@ import PurchaseHistory from "../pages/cart/PurchaseHistory.jsx";
 import HomeCart from "../pages/cart/HomeCart.jsx";
 import UpdatePage from "../pages/shared/pages/Update.jsx";
 import AddressPage from "../pages/cart/AddressCart.jsx";
+import Booking from "../pages/booking/HomeBooking.jsx";
 
 const MyApp = () => {
   const [tasks, setTasks] = useState([]);
@@ -30,8 +31,8 @@ const MyApp = () => {
               <Route path="/update" element={<UpdatePage setTasks={setTasks} tasks={tasks} />} />
               <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
               <Route path="/addressCart" element={<AddressPage setTasks={setTasks} tasks={tasks} />} />
-
-
+              <Route path="/booking" element={<Booking setTasks={setTasks} tasks={tasks} />} />
+            
             </AnimationRoutes>
           </ZMPRouter>
         </SnackbarProvider>

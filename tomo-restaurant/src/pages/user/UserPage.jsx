@@ -29,7 +29,7 @@ const UserPage = () => {
     <Box className="user-page" p={4}>
       <Box className="form-section" mt={2} mb={2} onClick={handleFollowOA}>
         <Text className="form-title" size="medium" bold mb={2}>
-        {followSuccess ? "Bạn đã là thành viên Yogo" : "Trở thành thành viên Shop Yogo"}
+        {followSuccess ? "Bạn đã là thành viên nhà hàng Wind" : "Trở thành thành viên nhà hàng Wind"}
         </Text>
         <Text size="small" className="descript-user">
           {followSuccess 
@@ -43,7 +43,7 @@ const UserPage = () => {
         </Text>
         <List>
           <List.Item
-            title="Lịch sử đơn hàng"
+            title="Lịch sử đặt bạn"
             className="list-history"
             prefix={<Icon icon="zi-clock-1" />}
             suffix={<Icon icon="zi-chevron-right" />}

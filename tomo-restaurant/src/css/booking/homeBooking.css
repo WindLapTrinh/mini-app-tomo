@@ -1,0 +1,15 @@
+.infomation-booking{
+  
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  }
+  .title-booking{
+    font-weight: 500;
+    color: #a81e1e !important;
+
+  }

@@ -10,7 +10,7 @@ const OrderProduct = () => {
 
   const handleCheckout = () => {
     // Xử lý thanh toán
-    console.log("Thanh toán");
+    console.log("Thanh toán"); 
   };
 
   return (

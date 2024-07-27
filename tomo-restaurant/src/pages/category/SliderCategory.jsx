@@ -9,21 +9,21 @@ const SliderCategory = () => {
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/veg-detail-1.jpg"
+              src="/images/product/ga-nuong.jpg"
               alt="slide-1"
             />
           </Swiper.Slide>
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/veg-detail-2.jpg"
+              src="/images/product/heo-quay.jpg"
               alt="slide-2"
             />
           </Swiper.Slide>
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/veg-detail-3.jpg"
+              src="/images/product/muc-nuong.jpg"
               alt="slide-3"
             />
           </Swiper.Slide>

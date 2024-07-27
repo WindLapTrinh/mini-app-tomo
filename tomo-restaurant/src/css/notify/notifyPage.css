@@ -17,7 +17,7 @@ body{
   }
   
   .notification-item {
-    background-color: #98efac;
+    background-color: #ef9c98;
     color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -25,19 +25,19 @@ body{
   
   .notification-title {
     margin-bottom: 8px;
-    color: #287637;
+    color: #763528;
     font-weight: bold;
   }
   
   .notification-message {
     margin-bottom: 8px;
-    color: #287637;
+    color: #763528;
 
   }
   
   .notification-date {
     margin-bottom: 8px;
-    color: #287637;
+    color: #763528;
 
   }
   

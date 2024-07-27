@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Box } from "zmp-ui";
-import { BsShieldFillCheck } from "react-icons/bs";
-import { FaTruck } from "react-icons/fa";
-import { GoClockFill } from "react-icons/go";
-import { BsStripe } from "react-icons/bs";
+import { GrRestaurant } from "react-icons/gr";
+import { TbBrandBooking } from "react-icons/tb";
+import { BiSolidDish } from "react-icons/bi";
+import { BsFillPatchCheckFill } from "react-icons/bs";
 import "../../css/detailhome/infroduce.css";
 
 const Introduce = () => {
   const [content, setContent] = useState({
-    mesage:"Miễn phí vận chuyển",
-    icon: <FaTruck/>
+    mesage:"Booking online, tiện lợi",
+    icon: <TbBrandBooking/>
   });
 
   useEffect(() => {
     const messages = [
-      {mesage:"Miễn phí vận chuyển", icon: <FaTruck/>},
-      {mesage:"Nay mua, mai nhận",icon:<GoClockFill/>},
-      {mesage:"Miễn phí giao hàng 0đ",icon:<FaTruck/>},
-      {mesage:"Hoàn tiền ngay nếu hàng lỗi", icon: <BsStripe/>}
+      {mesage:"Booking online, tiện lợi", icon: <TbBrandBooking/>},
+      {mesage:"Đặt bàn ngay, kẻo hết",icon:<BiSolidDish/>},
+      {mesage:"Món ăn hấp dẫn, chất lượng", icon: <BsFillPatchCheckFill/>}
     ];
     
     let index = 0;
@@ -33,8 +32,8 @@ const Introduce = () => {
   return (
     <Box className="introduce-home">
       <div className="fouder">
-        <BsShieldFillCheck />
-        <span>Chất lượng đảm bảo bởi Wind</span>
+        <GrRestaurant />
+        <span>Chào bạn, đến Nhà hàng Wind</span>
       </div>
       <div className="free-ship">
         <span>{content.icon}</span>

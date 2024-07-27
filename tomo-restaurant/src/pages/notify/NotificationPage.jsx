@@ -9,8 +9,8 @@ import "../../css/notify/notifyPage.css";
 const notifications = [
   {
     id: 1,
-    title: "Purchase history",
-    message: "The order is in transit. Check it out now!",
+    title: "Thông báo Booking bàn 001",
+    message: "Bạn đã đặt bàn 001, Chúc bạn dùng bữa ngon miệng",
     date: "2024-07-20",
   },
   // Thêm các thông báo khác nếu cần
@@ -18,7 +18,7 @@ const notifications = [
 
 const NotificationPage = () => {
   SetTitleHeader({
-    title: "Notification list",
+    title: "Thông báo của bạn",
   });
   const location = useLocation();
   

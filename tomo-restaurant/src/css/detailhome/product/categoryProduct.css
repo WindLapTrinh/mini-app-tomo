@@ -41,8 +41,8 @@
     background: #555;
   }
 .zaui-tabs-tabbar-item.zaui-tabs-tabbar-item-active{
-    color: #00b815 !important;
+    color: #a81e1e !important;
 }
 .zaui-tabs-tabbar-active-line{
-    background-color: #00b815 !important;
+    background-color: #a81e1e !important;
 }

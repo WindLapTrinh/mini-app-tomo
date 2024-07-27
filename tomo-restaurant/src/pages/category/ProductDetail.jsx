@@ -17,34 +17,34 @@ import "../../css/detailhome/product/productDetail.css";
 
 const product = {
   id: 1,
-  name: "Rau cải bẹ",
-  image: "/images/product/veg-2.jpg",
+  name: "Gà nướng than",
+  image: "/images/product/ga-nuong.jpg",
   price: "20000",
   description:
-    "Dầu ăn ngày nay ngày càng đa dạng phù hợp hơn trong từng nhu cầu sử dụng. Có thể sử dụng được.",
+    "Gà nướng là món ăn được do Wind sáng tạo, được nướng trên than ở Bắc Ninh, hương vị gà ta tuyệt vời kết hợp với mùi than ở Bắc Ning là môt sự kết hợp hoàn hảo",
   relatedProducts: [
     {
       id: 2,
-      name: "Xà lách thủy tinh",
-      image: "/images/product/veg-1.jpg",
+      name: "Gà nướng than",
+      image: "/images/product/ga-nuong.jpg",
       price: "20000",
     },
     {
       id: 3,
-      name: "Cải bẹ xanh",
-      image: "/images/product/veg-2.jpg",
+      name: "Mực nướng",
+      image: "/images/product/muc-nuong.jpg",
       price: "15000",
     },
     {
       id: 4,
-      name: "Bắp cải trắng",
-      image: "/images/product/veg-3.jpg",
+      name: "Heo quay",
+      image: "/images/product/heo-quay.jpg",
       price: "50000",
     },
     {
       id: 5,
-      name: "Rau mồng tơi",
-      image: "/images/product/veg-4.jpg",
+      name: "Đậu hủ",
+      image: "/images/product/product-1.jpg",
       price: "100000",
     },
   ],
@@ -71,7 +71,7 @@ const ProductDetail = () => {
           <Text className="product-price">${product.price}</Text>
           <Text className="product-description">{product.description}</Text>
           <Button className="add-to-cart-button" onClick={handleAddCart}>
-            Add to Cart
+            Thêm vào giỏ
           </Button>
         </Box>
         <Box className="related-products">

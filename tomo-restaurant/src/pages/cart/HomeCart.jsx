@@ -12,15 +12,15 @@ import "../../css/cart/shippingInformation.css";
 const cartItems = [
   {
     id: 1,
-    name: "Bắt cải trắng",
-    image: "/images/product/veg-3.jpg",
+    name: "Gà quay",
+    image: "/images/product/ga-nuong.jpg",
     price: "29.99",
     quantity: 1,
   },
   {
     id: 2,
-    name: "Rau mồng tơi",
-    image: "/images/product/veg-4.jpg",
+    name: "Heo quay",
+    image: "/images/product/heo-quay.jpg",
     price: "15.99",
     quantity: 2,
   },
@@ -60,7 +60,7 @@ const HomeCart = () => {
           <Box className="header-cart-product">
             <img className="icon-header-cart" src="/images/icon/cart.jpg" />
             <Text className="section-title" size="large" bold mb={3}>
-              Sản phẩm đặt mua
+              Món ăn của bạn
             </Text>
           </Box>
 

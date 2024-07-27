@@ -44,7 +44,7 @@
 
 .cart-item-quantity {
   font-size: 12px;
-  color: #00b815;
+  color: #a81e1e;
   font-weight: bold;
 }
 .payment-details {
@@ -57,10 +57,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
 }
 .btn-payment {
-  background: #00b815;
+  background: #a81e1e;
 }
 .zaui-input:hover {
-  border-color: #00b815 !important;
+  border-color: #a81e1e !important;
 }
 .sum-cart-page {
   margin-bottom: 30px;

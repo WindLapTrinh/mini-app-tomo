@@ -8,13 +8,11 @@ import "../../css/detailhome/slider.css";
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 
 const slide_img = [
-  "/images/banner/banner-one.jpg",
-  "/images/banner/banner-two.png",
+ 
+  "/images/banner/banner-1.jpg",
+  "/images/banner/banner-2.jpg",
+  "/images/banner/banner-3.jpg",
   "/images/banner/banner-4.jpg",
-  "/images/banner/banner-5.png",
-  "/images/banner/banner-7.jpg",
-  "/images/banner/banner-8.jpg",
-  "/images/banner/banner-9.jpg",
 ];
 
 const Slider = () => {

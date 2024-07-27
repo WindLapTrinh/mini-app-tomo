@@ -36,22 +36,23 @@
     margin-right: 10px;
     border-radius: 5px;
     background: #ffffff;
-    padding: 6px;
-    width: 132px;
+    width: 128px;
   }
   .title-product{
     color:#ffffff;
   }
   .custom-border-image{
-    width: 114px;
+    width: 128px;
+    border-radius: 5px 5px 0 0;  
   }
   .name-product-today{
     float: left;
     margin-right: 8px;
+    margin-bottom: 3px;
   }
   .price-product-today{
     float: right;
-    color: #00b815;
+    color: #a81e1e;
     font-weight: bold;
   }
   .icon-product-today{
