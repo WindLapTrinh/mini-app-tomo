@@ -156,7 +156,7 @@ const ProductDetail = () => {
               }}
               className="btn-add-cart"
             >
-              Add to Cart
+              Thêm vào giỏ
             </Button>
           </Box>
         </Box>
