@@ -70,7 +70,7 @@ const CategoryProduct = () => {
     <Box className="product-today">
       <div className="icon-product-today"><TiShoppingCart/></div>
       <Text.Title size="small" className="title-product">
-        Products today
+        Sản phẩm hôm nay
       </Text.Title>
       <Box mt={2} className="category-product">
         <Box className="slider-category  p-4">

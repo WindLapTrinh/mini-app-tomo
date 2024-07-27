@@ -11,11 +11,11 @@ const HeaderListProduct = () => {
           <FaHotjar />
         </div>
         <div className="title-list-product">
-          <Text>Hot products</Text>
+          <Text>Sản phẩm hot</Text>
         </div>
       </div>
       <div className="input-search-product">
-        <Input.Search placeholder="search product" size="small" />
+        <Input.Search placeholder="tìm kiếm sản phẩm..." size="small" />
       </div>
     </div>
   );

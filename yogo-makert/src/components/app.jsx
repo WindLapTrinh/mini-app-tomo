@@ -11,6 +11,7 @@ import UserPage from "../pages/user/UserPage.jsx";
 import PurchaseHistory from "../pages/cart/PurchaseHistory.jsx";
 import HomeCart from "../pages/cart/HomeCart.jsx";
 import UpdatePage from "../pages/shared/pages/Update.jsx";
+import Language from "../pages/shared/pages/Language.jsx";
 import AddressPage from "../pages/cart/AddressCart.jsx";
 
 const MyApp = () => {
@@ -28,6 +29,7 @@ const MyApp = () => {
               <Route path="/contactUser" element={<UserPage setTasks={setTasks} tasks={tasks} />} />
               <Route path="/purchaseHistory" element={<PurchaseHistory setTasks={setTasks} tasks={tasks} />} />
               <Route path="/update" element={<UpdatePage setTasks={setTasks} tasks={tasks} />} />
+              {/* <Route path="/" element={<Language setTasks={setTasks} tasks={tasks} />} /> */}
               <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
               <Route path="/addressCart" element={<AddressPage setTasks={setTasks} tasks={tasks} />} />
 

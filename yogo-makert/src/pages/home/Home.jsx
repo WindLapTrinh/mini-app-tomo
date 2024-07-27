@@ -29,18 +29,17 @@ const categories = [
 ];
 
 const products = [
-  { id: 1, name: "Flesh", image: "/images/category/flesh.jpg" },
+  { id: 1, name: "Thịt gà", image: "/images/category/chiken.jpg" },
   { id: 2, name: "Snacks", image: "/images/category/snacks.jpg" },
-  { id: 3, name: "Vegetables", image: "/images/category/vegetables.jpg" },
-  { id: 4, name: "Fruit", image: "/images/category/fruit.jpg" },
-  { id: 5, name: "Seafood", image: "/images/category/seafood.jpg" },
-  { id: 6, name: "Rice", image: "/images/category/rice.jpg" },
-  { id: 7, name: "Beer", image: "/images/category/beer.jpg" },
-  { id: 9, name: "Flesh", image: "/images/category/flesh.jpg" },
-  { id: 9, name: "Snacks", image: "/images/category/snacks.jpg" },
-  { id: 10, name: "Vegetables", image: "/images/category/vegetables.jpg" },
-  { id: 11, name: "Fruit", image: "/images/category/fruit.jpg" },
-  { id: 12, name: "Seafood", image: "/images/category/seafood.jpg" },
+  { id: 3, name: "Gia vị", image: "/images/category/spice.jpg" },
+  { id: 4, name: "Bánh kẹo", image: "/images/category/hamburger.jpg" },
+  { id: 5, name: "Giạo", image: "/images/category/rice.jpg" },
+  { id: 6, name: "Bia", image: "/images/category/beer.jpg" },
+  { id: 7, name: "Bia", image: "/images/category/fruit.jpg" },
+  { id: 7, name: "Dụng cụ", image: "/images/category/cosmetics.jpg"},
+  { id: 8, name: "Rau củ", image: "/images/category/vegetables.jpg"},
+  { id: 9, name: "Hải sản", image: "/images/category/seafood.jpg"},
+
 ];
 
 const gotoCategory = (id) => {

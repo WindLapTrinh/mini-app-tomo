@@ -18,7 +18,7 @@ const notifications = [
 
 const NotificationPage = () => {
   SetTitleHeader({
-    title: "Notification list",
+    title: "Thông báo của bạn",
   });
   const location = useLocation();
   

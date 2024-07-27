@@ -71,7 +71,7 @@ const ProductDetail = () => {
           <Text className="product-price">${product.price}</Text>
           <Text className="product-description">{product.description}</Text>
           <Button className="add-to-cart-button" onClick={handleAddCart}>
-            Add to Cart
+            Thêm vào giỏ
           </Button>
         </Box>
         <Box className="related-products">

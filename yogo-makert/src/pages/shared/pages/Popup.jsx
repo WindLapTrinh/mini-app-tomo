@@ -8,7 +8,7 @@ const Popup = ({ show, onClose }) => {
     <div className="popup-overlay">
       <div className="popup-content">
         <button className="popup-close" onClick={onClose}>×</button>
-        <img className='image-popup' src='/images/popup/popup-1.png' alt='popup makert'/>
+        <img className='image-popup' src='/images/popup/popup-1.jpg' alt='popup makert'/>
       </div>
     </div>
   );
