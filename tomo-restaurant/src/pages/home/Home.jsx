@@ -29,17 +29,10 @@ const categories = [
 ];
 
 const products = [
-  { id: 1, name: "Thịt gà", image: "/images/category/chiken.jpg" },
-  { id: 2, name: "Snacks", image: "/images/category/snacks.jpg" },
-  { id: 3, name: "Gia vị", image: "/images/category/spice.jpg" },
-  { id: 4, name: "Bánh kẹo", image: "/images/category/hamburger.jpg" },
-  { id: 5, name: "Giạo", image: "/images/category/rice.jpg" },
-  { id: 6, name: "Bia", image: "/images/category/beer.jpg" },
-  { id: 7, name: "Bia", image: "/images/category/fruit.jpg" },
-  { id: 7, name: "Dụng cụ", image: "/images/category/cosmetics.jpg"},
-  { id: 8, name: "Rau củ", image: "/images/category/vegetables.jpg"},
-  { id: 9, name: "Hải sản", image: "/images/category/seafood.jpg"},
-
+  { id: 1, name: "Mì sào", image: "/images/category/combo-1.jpg" },
+  { id: 2, name: "Đồ nướng", image: "/images/category/combo-2.jpg" },
+  { id: 3, name: "Combo Three", image: "/images/category/combo-3.jpg" },
+  { id: 4, name: "Đồ ăn nhanh", image: "/images/category/combo-4.jpg" },
 ];
 
 const gotoCategory = (id) => {
