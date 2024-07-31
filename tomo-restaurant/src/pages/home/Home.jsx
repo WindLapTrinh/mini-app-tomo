@@ -31,8 +31,10 @@ const categories = [
 const products = [
   { id: 1, name: "Mì sào", image: "/images/category/combo-1.jpg" },
   { id: 2, name: "Đồ nướng", image: "/images/category/combo-2.jpg" },
-  { id: 3, name: "Combo Three", image: "/images/category/combo-3.jpg" },
-  { id: 4, name: "Đồ ăn nhanh", image: "/images/category/combo-4.jpg" },
+  { id: 3, name: "Combo 3", image: "/images/category/combo-3.jpg" },
+  { id: 4, name: "Lẩu", image: "/images/category/combo-4.jpg" },
+  { id: 5, name: "Hải sản", image: "/images/category/combo-5.jpg" },
+  { id: 6, name: "Topping", image: "/images/category/combo-6.jpg" },
 ];
 
 const gotoCategory = (id) => {
