@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Wind Travel",
+    "headerTitle": "Wind Travel",
+    "headerColor": "#0075bd",
+    "textColor": "white",
+    "statusBarColor": "#0075bd",
+    "leftButton": "back",
+    "statusBar": "normal",
+    "actionBarHidden": false,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": []
+}
