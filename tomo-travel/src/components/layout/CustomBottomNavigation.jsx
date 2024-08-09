@@ -3,7 +3,9 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsHouse } from "react-icons/bs";
 import { TbBrandBooking } from "react-icons/tb";
-import "../../css/detailhome/bottomNavigation.css"
+import { openChatScreen } from "../../pages/shared/utils/openChatScreen";
+
+import "../../css/detailhome/bottomNavigation.css";
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -12,29 +14,31 @@ const CustomBottomNavigation = () => {
   const [activeTab, setActiveTab] = useState(keyTab || "home");
 
   const handleHome = (keyTab) => {
-    navigate("/",{state : {keyTab}});
-    console.log("Tab active",keyTab)
-  }
+    navigate("/", { state: { keyTab } });
+    console.log("Tab active", keyTab);
+  };
   const handleNotify = (keyTab) => {
     navigate("/notificationPage", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
   const handleTour = (keyTab) => {
-    navigate("/homeCart", {state : {keyTab}});
-    console.log("Tab active", keyTab)
-  }
+    navigate("/homeCart", { state: { keyTab } });
+    console.log("Tab active", keyTab);
+  };
   const handleContactUser = (keyTab) => {
-    navigate("/contactUser",{state : {keyTab}});
-    console.log("Tab active",keyTab)
-  }
-
+    navigate("/contactUser", { state: { keyTab } });
+    console.log("Tab active", keyTab);
+  };
+  const handleMess = (keyTab) => {
+    console.log("Tab active", keyTab);
+  };
   return (
     <BottomNavigation
       fixed
       activeKey={activeTab}
       onChange={(key) => setActiveTab(key)}
     >
-     <BottomNavigation.Item
+      <BottomNavigation.Item
         className={activeTab === "home" ? "icon-active" : ""}
         key="home"
         label="Home"
@@ -49,7 +53,7 @@ const CustomBottomNavigation = () => {
           </div>
         }
         onClick={() => {
-           handleHome("home");
+          handleHome("home");
         }}
       />
       <BottomNavigation.Item
@@ -81,8 +85,24 @@ const CustomBottomNavigation = () => {
           </div>
         }
         onClick={() => {
-           handleTour("tour");
+          handleTour("tour");
         }}
+      />
+      <BottomNavigation.Item
+        className={activeTab === "mess" ? "icon-active" : ""}
+        key="mess"
+        label="Nhắn tin"
+        icon={
+          <div className="accounting-icon-wrapper">
+            <Icon icon="zi-chat" />
+          </div>
+        }
+        activeIcon={
+          <div className="accounting-icon-wrapper">
+            <Icon icon="zi-chat" />
+          </div>
+        }
+        onClick={openChatScreen}
       />
       <BottomNavigation.Item
         className={activeTab === "user" ? "icon-active" : ""}
@@ -99,7 +119,7 @@ const CustomBottomNavigation = () => {
           </div>
         }
         onClick={() => {
-          handleContactUser("user")
+          handleContactUser("user");
         }}
       />
     </BottomNavigation>

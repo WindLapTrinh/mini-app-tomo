@@ -1,23 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { Box } from "zmp-ui";
 import { BsShieldFillCheck } from "react-icons/bs";
-import { FaTruck } from "react-icons/fa";
-import { GoClockFill } from "react-icons/go";
-import { BsStripe } from "react-icons/bs";
+import { BsPatchCheckFill } from "react-icons/bs";
+import { FaCarSide } from "react-icons/fa";
+import { BsClipboard2CheckFill } from "react-icons/bs";
+import { BsEmojiSunglassesFill } from "react-icons/bs";
 import "../../css/detailhome/infroduce.css";
 
 const Introduce = () => {
   const [content, setContent] = useState({
     mesage:"Đặt tour có vouchers",
-    icon: <FaTruck/>
+    icon: <BsClipboard2CheckFill/>
   });
 
   useEffect(() => {
     const messages = [
-      {mesage:"Đặt tour có vouchers", icon: <FaTruck/>},
-      {mesage:"Hè này đi đâu",icon:<GoClockFill/>},
-      {mesage:"Ưu đãi khách hàng",icon:<FaTruck/>},
-      {mesage:"Vui chơi hè cùng Wind", icon: <BsStripe/>}
+      {mesage:"Đặt tour có vouchers", icon: <BsClipboard2CheckFill/>},
+      {mesage:"Hè này đi đâu",icon:<FaCarSide/>},
+      {mesage:"Ưu đãi khách hàng",icon:<BsPatchCheckFill/>},
+      {mesage:"Vui chơi hè cùng Wind", icon: <BsEmojiSunglassesFill/>}
     ];
     
     let index = 0;

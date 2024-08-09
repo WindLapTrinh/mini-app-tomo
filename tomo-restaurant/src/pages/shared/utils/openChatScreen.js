@@ -4,8 +4,8 @@ export const openChatScreen = async () => {
   try {
     await openChat({
       type: "oa",
-      id: "9905154963002439",
-      message: "Xin Chào Tomo Order",
+      id: "3999529157940989049",
+      message: "Xin Chào SLK Solutions",
       success: async () => {
         try {
           const res = await axiosClient.post(

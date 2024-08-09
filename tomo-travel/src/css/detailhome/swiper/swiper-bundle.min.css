@@ -1,6 +1,6 @@
-.product-today{
+/* .product-today{
   padding: 0px 10px 5px 10px;
-}
+} */
 .category-product {
     background: rgb(82 153 230);
     color: #333;
@@ -38,6 +38,7 @@
     background: #ffffff;
     padding: 6px;
     width: 132px;
+    height: auto;
   }
   .title-product{
     color:#ffffff;

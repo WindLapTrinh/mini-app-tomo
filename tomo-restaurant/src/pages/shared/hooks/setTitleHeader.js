@@ -10,7 +10,7 @@ const SetTitleHeader = ({ title, headerColor, statusBarColor, headerTextColor })
       hideAndroidBottomNavigationBar: true,
       hideIOSSafeAreaBottom: true,
       actionBar: {
-        title: title || "Yogo Store",
+        title: title || "SLK Restaurant",
         leftButton: "back",
       },
       success: (res) => {

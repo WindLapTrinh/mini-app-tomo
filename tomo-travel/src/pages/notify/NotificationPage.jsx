@@ -9,8 +9,8 @@ import "../../css/notify/notifyPage.css";
 const notifications = [
   {
     id: 1,
-    title: "Purchase history",
-    message: "The order is in transit. Check it out now!",
+    title: "Tour Phú Quốc",
+    message: "2 ngày 2 đêm trãi nghiệm tại Phú Quốc!",
     date: "2024-07-20",
   },
   // Thêm các thông báo khác nếu cần

@@ -43,7 +43,7 @@ const gotoCategory = (id) => {
 
 const Home = (props) => {
   SetTitleHeader({
-    title: "Nhà hàng Wind",
+    title: "Nhà hàng SLK",
   });
   const navigate = useNavigate();
 

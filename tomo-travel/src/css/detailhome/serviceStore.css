@@ -40,6 +40,7 @@
   }
   .boder-image {
     border-radius: 50px !important;
+    border: 1px solid #0075bd;
   }
   .text-service{
     font-weight: 500;

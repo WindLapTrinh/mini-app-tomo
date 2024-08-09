@@ -12,23 +12,23 @@ import "../../css/cart/shippingInformation.css";
 const cartItems = [
   {
     id: 1,
-    name: "Bắt cải trắng",
-    image: "/images/product/veg-3.jpg",
-    price: "29.99",
+    name: "Bình Lập",
+    image: "/images/product/binh-lap.jpg",
+    price: "24.000.000",
     quantity: 1,
   },
   {
     id: 2,
-    name: "Rau mồng tơi",
-    image: "/images/product/veg-4.jpg",
-    price: "15.99",
+    name: "Tây Ninh",
+    image: "/images/product/tay-ninh.jpg",
+    price: "8.000.000",
     quantity: 2,
   },
 ];
 
 const HomeCart = () => {
   SetTitleHeader({
-    title: "Giỏ hàng của bạn",
+    title: "Tour của bạn",
   });
   const [shippingInfo, setShippingInfo] = useState({
     address: "",
@@ -60,7 +60,7 @@ const HomeCart = () => {
           <Box className="header-cart-product">
             <img className="icon-header-cart" src="/images/icon/cart.jpg" />
             <Text className="section-title" size="large" bold mb={3}>
-              Sản phẩm đặt mua
+              Tour đã chọn
             </Text>
           </Box>
 
@@ -71,15 +71,14 @@ const HomeCart = () => {
               </Box>
               <Box className="cart-item-info">
                 <Text className="cart-item-name">{item.name}</Text>
-                <Text className="cart-item-price">${item.price}</Text>
+                <Text className="cart-item-price">${item.price} đ</Text>
                 <Text className="cart-item-quantity">
-                  Quantity: {item.quantity}
+                  Số lượng: {item.quantity}
                 </Text>
               </Box>
             </Box>
           ))}
         </Box>
-        <ShippingInfo />
         <InfomationVoucher/>
         <PaymentDetail />
       </Box>

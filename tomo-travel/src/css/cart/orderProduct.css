@@ -30,6 +30,10 @@
   }
   
   .btn-payment {
-   background: #00b815;
+   background: #0075bd;
+  }
+  .calculate-total{
+    font-weight: 500;
+    color: #0075bd;
   }
   

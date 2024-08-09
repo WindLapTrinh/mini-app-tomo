@@ -110,25 +110,26 @@ const ProductDetail = () => {
         handler
         swipeToClose
       >
-        <Box p={4} className="custom-bottom-sheet" flex flexDirection="column">
-          <Box className="bottom-sheet-header">
-            <img className="cart-img" src={product.image} />
-            <Text className="bottom-sheet-title" size="large" bold>
+        <Box p={4} className="custom-product-item" flex flexDirection="column">
+          <Box className="sheet-header-product">
+            <img className="sheet-img-product" src={product.image} />
+            <Text className="sheet-title-product" size="large" bold>
               {product.name}
             </Text>
             <Text>
-              <span className="cart-price">{product.price} VND</span>
+              <span className="sheet-price-product">{product.price} đ</span>
             </Text>
           </Box>
           <Box
-            className="bottom-sheet-body"
+            className="sheet-body-product"
             flex
             flexDirection="row"
             alignItems="center"
             justifyContent="space-between"
+            mt={2}
           >
             <Button
-              className="btn-reduce"
+              className="btn-sheet-product"
               onClick={() => handleQuantityChange(-1)}
             >
               -
@@ -141,22 +142,30 @@ const ProductDetail = () => {
               style={{ width: "40px", height: "40px", textAlign: "center" }}
             />
             <Button
-              className="btn-increased"
+              className="btn-sheet-increased"
               onClick={() => handleQuantityChange(1)}
             >
               +
             </Button>
           </Box>
-          <Box my={4} className="bottom-sheet-footer">
+          <Box
+            my={4}
+            className="sheet-footer-product"
+            flex
+            flexDirection="row"
+            justifyContent="space-between"
+          >
             <Button
-              fullWidth
-              onClick={() => {
-                setActionSheetVisible(false);
-                // Handle add to cart logic here
-              }}
-              className="btn-add-cart"
+              onClick={() => setActionSheetVisible(false)}
+              className="btn-sheet-cart"
             >
-              Thêm vào giỏ
+              Thêm vào giỏ hàng
+            </Button>
+            <Button
+              onClick={() => setActionSheetVisible(false)}
+              className="btn-sheet-payment"
+            >
+              Mua ngay
             </Button>
           </Box>
         </Box>

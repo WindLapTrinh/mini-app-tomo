@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text } from "zmp-ui";
-import { TiShoppingCart } from "react-icons/ti";
+import { BsFillGeoAltFill } from "react-icons/bs";
 import "../../css/detailhome/swiper/swiper-bundle.min.css";
 const categories = [
   {
@@ -29,48 +29,36 @@ const categories = [
   },
   {
     id: 5,
-    name: "Mực na",
-    image: "/images/product/seafood-2.jpg",
-    price: "$342000",
+    name: "Bangkok",
+    image: "/images/product/bangkok.jpg",
+    price: "$2000",
   },
   {
     id: 6,
-    name: "Thịt vụn bò",
-    image: "/images/product/flesh-4.jpg",
-    price: "$12000",
+    name: "Châu Âu",
+    image: "/images/product/chau-au.jpeg",
+    price: "$342000",
   },
   {
     id: 7,
-    name: "Hàu sashiml",
-    image: "/images/product/seafood-3.jpg",
-    price: "$6000",
+    name: "Đại lý TQ",
+    image: "/images/product/dai-ly.jpg",
+    price: "$678000",
   },
   {
     id: 8,
-    name: "Cá Basa",
-    image: "/images/product/flesh-5.jpg",
-    price: "$4800",
-  },
-  {
-    id: 9,
-    name: "Mực nút",
-    image: "/images/product/seafood-4.jpg",
-    price: "$2300",
-  },
-  {
-    id: 10,
-    name: "Mực ống",
-    image: "/images/product/seafood-5.jpg",
-    price: "$20600",
-  },
+    name: "Thái lan",
+    image: "/images/product/thai-lan.jpg",
+    price: "$78000",
+  }
 ];
 
 const CategoryProduct = () => {
   return (
     <Box className="product-today">
-      <div className="icon-product-today"><TiShoppingCart/></div>
+      <div className="icon-product-today"><BsFillGeoAltFill/></div>
       <Text.Title size="small" className="title-product">
-        Sản phẩm hôm nay
+        Bạn muốn đi đâu ?
       </Text.Title>
       <Box mt={2} className="category-product">
         <Box className="slider-category  p-4">

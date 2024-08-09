@@ -3,11 +3,11 @@ import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
-import bannerOne from "/images/banner/banner-1.jpg";
-import bannerTwo from "/images/banner/banner-2.jpg";
-import banner3 from "/images/banner/banner-3.jpg";
-import banner4 from "/images/banner/banner-4.jpg";
-import banner5 from "/images/banner/banner-5.jpg";
+import bannerOne from "../../images/banner/banner-1.jpg";
+import bannerTwo from "../../images/banner/banner-2.jpg";
+import banner3 from "../../images/banner/banner-3.jpg";
+import banner4 from "../../images/banner/banner-4.jpg";
+import banner5 from "../../images/banner/banner-5.jpg";
 
 
 import "../../css/detailhome/slider.css";

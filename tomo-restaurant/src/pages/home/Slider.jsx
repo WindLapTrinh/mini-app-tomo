@@ -4,16 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "../../css/detailhome/slider.css";
+import BannerOne from "../../images/banner/banner-1.jpg";
+import BannerTwo from "../../images/banner/banner-2.jpg";
+import BannerThree from "../../images/banner/banner-3.jpg";
+import BannerFor from "../../images/banner/banner-4.jpg";
 
 SwiperCore.use([EffectCoverflow, Autoplay, Pagination]);
 
-const slide_img = [
- 
-  "/images/banner/banner-1.jpg",
-  "/images/banner/banner-2.jpg",
-  "/images/banner/banner-3.jpg",
-  "/images/banner/banner-4.jpg",
-];
+const slide_img = [BannerOne, BannerTwo, BannerThree, BannerFor];
 
 const Slider = () => {
   return (

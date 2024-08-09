@@ -33,7 +33,7 @@ const Introduce = () => {
     <Box className="introduce-home">
       <div className="fouder">
         <GrRestaurant />
-        <span>Chào bạn, đến Nhà hàng Wind</span>
+        <span>Chào bạn, đến Nhà hàng SLK</span>
       </div>
       <div className="free-ship">
         <span>{content.icon}</span>

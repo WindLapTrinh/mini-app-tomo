@@ -17,34 +17,34 @@ import "../../css/detailhome/product/productDetail.css";
 
 const product = {
   id: 1,
-  name: "Rau cải bẹ",
-  image: "/images/product/veg-2.jpg",
+  name: "Tour thái lan",
+  image: "/images/product/thai-lan.jpg",
   price: "20000",
   description:
-    "Dầu ăn ngày nay ngày càng đa dạng phù hợp hơn trong từng nhu cầu sử dụng. Có thể sử dụng được.",
+    "Trãi nghiệm ẩm thực tại thái lan và văn hóa tại đất nước này.",
   relatedProducts: [
     {
       id: 2,
-      name: "Xà lách thủy tinh",
-      image: "/images/product/veg-1.jpg",
+      name: "Vũng tàu",
+      image: "/images/product/vung-tau.jpg",
       price: "20000",
     },
     {
       id: 3,
-      name: "Cải bẹ xanh",
-      image: "/images/product/veg-2.jpg",
+      name: "Đại lý TQ",
+      image: "/images/product/dai-ly.jpg",
       price: "15000",
     },
     {
       id: 4,
-      name: "Bắp cải trắng",
-      image: "/images/product/veg-3.jpg",
+      name: "Tây ninh",
+      image: "/images/product/tay-ninh.jpg",
       price: "50000",
     },
     {
       id: 5,
-      name: "Rau mồng tơi",
-      image: "/images/product/veg-4.jpg",
+      name: "Phú Quốc",
+      image: "/images/product/phu-quoc.jpg",
       price: "100000",
     },
   ],
@@ -71,12 +71,12 @@ const ProductDetail = () => {
           <Text className="product-price">${product.price}</Text>
           <Text className="product-description">{product.description}</Text>
           <Button className="add-to-cart-button" onClick={handleAddCart}>
-            Thêm vào giỏ
+            Đặt tour
           </Button>
         </Box>
         <Box className="related-products">
           <div className="icon-related-products"><BsShop/></div>
-          <Text className="related-products-title">Sản phẩm liên quan</Text>
+          <Text className="related-products-title">Danh sách tour liên quan</Text>
           <Box className="related-products-list">
             {product.relatedProducts.map((relatedProduct) => (
               <Box key={relatedProduct.id} className="related-product-item">
@@ -110,25 +110,26 @@ const ProductDetail = () => {
         handler
         swipeToClose
       >
-        <Box p={4} className="custom-bottom-sheet" flex flexDirection="column">
-          <Box className="bottom-sheet-header">
-            <img className="cart-img" src={product.image} />
-            <Text className="bottom-sheet-title" size="large" bold>
+        <Box p={4} className="custom-product-item" flex flexDirection="column">
+          <Box className="sheet-header-product">
+            <img className="sheet-img-product" src={product.image} />
+            <Text className="sheet-title-product" size="large" bold>
               {product.name}
             </Text>
             <Text>
-              <span className="cart-price">{product.price} VND</span>
+              <span className="sheet-price-product">{product.price} đ</span>
             </Text>
           </Box>
           <Box
-            className="bottom-sheet-body"
+            className="sheet-body-product"
             flex
             flexDirection="row"
             alignItems="center"
             justifyContent="space-between"
+            mt={2}
           >
             <Button
-              className="btn-reduce"
+              className="btn-sheet-product"
               onClick={() => handleQuantityChange(-1)}
             >
               -
@@ -141,22 +142,30 @@ const ProductDetail = () => {
               style={{ width: "40px", height: "40px", textAlign: "center" }}
             />
             <Button
-              className="btn-increased"
+              className="btn-sheet-increased"
               onClick={() => handleQuantityChange(1)}
             >
               +
             </Button>
           </Box>
-          <Box my={4} className="bottom-sheet-footer">
+          <Box
+            my={4}
+            className="sheet-footer-product"
+            flex
+            flexDirection="row"
+            justifyContent="space-between"
+          >
             <Button
-              fullWidth
-              onClick={() => {
-                setActionSheetVisible(false);
-                // Handle add to cart logic here
-              }}
-              className="btn-add-cart"
+              onClick={() => setActionSheetVisible(false)}
+              className="btn-sheet-cart"
             >
-              Add to Cart
+              Thêm vào giỏ hàng
+            </Button>
+            <Button
+              onClick={() => setActionSheetVisible(false)}
+              className="btn-sheet-payment"
+            >
+              Mua ngay
             </Button>
           </Box>
         </Box>

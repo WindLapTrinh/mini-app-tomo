@@ -4,8 +4,7 @@ import "../../css/cart/orderProduct.css";
 
 const OrderProduct = () => {
   const calculateTotal = () => {
-    // Hàm tính tổng tiền, thay thế bằng tính toán thực tế của bạn
-    return (100.00).toFixed(2); // Ví dụ: tổng tiền là $100.00
+    return ("31.000.000");
   };
 
   const handleCheckout = () => {
@@ -20,7 +19,7 @@ const OrderProduct = () => {
           <Text size="medium" bold>
             Tổng cộng:
           </Text>
-          <Text size="medium">${calculateTotal()}</Text>
+          <Text className="calculate-total" size="medium">{calculateTotal()} đ</Text>
         </Box>
         <Button className="btn-payment" onClick={handleCheckout}>
           Thanh toán
