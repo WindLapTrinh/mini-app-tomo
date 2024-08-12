@@ -30,7 +30,7 @@ const categories = [
 ];
 
 const CategoryProduct = () => {
-  const [timeRemaining, setTimeRemaining] = useState(3600); // initial time in seconds (1 hour)
+  const [timeRemaining, setTimeRemaining] = useState(6600); // initial time in seconds (1 hour)
 
   useEffect(() => {
     const interval = setInterval(() => {
