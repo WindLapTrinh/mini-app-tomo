@@ -1,22 +1,27 @@
 import React, { useState } from "react";
-import { Box, Text, Icon, Sheet, Button, Input } from "zmp-ui";
+import { Box, Text, Icon } from "zmp-ui";
 import { useNavigate } from "react-router-dom";
+import SheetCart from "../shared/cart/SheetCart"; 
 
 const ProductItem = ({ product }) => {
   const navigate = useNavigate();
   const [actionSheetVisible, setActionSheetVisible] = useState(false);
-  const [quantity, setQuantity] = useState(1);
 
   const handleDetailProduct = () => {
     navigate("/detailProduct");
   };
-  
-  const handleAddTour = () => {
+
+  const handleSetActiveSheet = () => {
     setActionSheetVisible(true);
   };
 
-  const handleQuantityChange = (delta) => {
-    setQuantity(prevQuantity => Math.max(1, prevQuantity + delta));
+  const handleAddToCart = () => {
+    setActionSheetVisible(false);
+  };
+
+  const handlePayment = () => {
+    setActionSheetVisible(false);
+    navigate("/homeCart");
   };
 
   return (
@@ -34,78 +39,17 @@ const ProductItem = ({ product }) => {
       </div>
       <Text size="xxSmall" className="text-gray pb-2">
         <span className="product-price">{product.price} đ</span>
-        <span onClick={handleAddTour}>
+        <span onClick={handleSetActiveSheet}>
           <Icon className="product-icon" icon={product.icon} />
         </span>
       </Text>
-      <Sheet
+      <SheetCart
+        product={product}
         visible={actionSheetVisible}
         onClose={() => setActionSheetVisible(false)}
-        autoHeight
-        mask
-        handler
-        swipeToClose
-      >
-        <Box p={4} className="custom-product-item" flex flexDirection="column">
-          <Box className="sheet-header-product">
-            <img className="sheet-img-product" src={product.image} />
-            <Text className="sheet-title-product" size="large" bold>
-              {product.name}
-            </Text>
-            <Text>
-              <span className="sheet-price-product">{product.price} đ</span>
-            </Text>
-          </Box>
-          <Box
-            className="sheet-body-product"
-            flex
-            flexDirection="row"
-            alignItems="center"
-            justifyContent="space-between"
-            mt={2}
-          >
-            <Button
-              className="btn-sheet-product"
-              onClick={() => handleQuantityChange(-1)}
-            >
-              -
-            </Button>
-            Số lượng:
-            <Input
-              type="number"
-              value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-              style={{ width: "40px", height: "40px", textAlign: "center" }}
-            />
-            <Button
-              className="btn-sheet-increased"
-              onClick={() => handleQuantityChange(1)}
-            >
-              +
-            </Button>
-          </Box>
-          <Box
-            my={4}
-            className="sheet-footer-product"
-            flex
-            flexDirection="row"
-            justifyContent="space-between"
-          >
-            <Button
-              onClick={() => setActionSheetVisible(false)}
-              className="btn-sheet-cart"
-            >
-              Thêm vào giỏ hàng
-            </Button>
-            <Button
-              onClick={() => setActionSheetVisible(false)}
-              className="btn-sheet-payment"
-            >
-              Mua ngay
-            </Button>
-          </Box>
-        </Box>
-      </Sheet>
+        onAddToCart={handleAddToCart}
+        onPayment={handlePayment}
+      />
     </div>
   );
 };

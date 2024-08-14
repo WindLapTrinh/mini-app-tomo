@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Text,
@@ -12,6 +13,8 @@ import {
 import ProductList from "../home/ProductList.jsx";
 import SliderCategory from "./SliderCategory.jsx";
 import CustomBottomNavigation from "../../components/layout/CustomBottomNavigation.jsx";
+import SheetCart from "../shared/cart/SheetCart"; 
+
 import { BsShop } from "react-icons/bs";
 import "../../css/detailhome/product/productDetail.css";
 
@@ -49,17 +52,21 @@ const product = {
     },
   ],
 };
-
 const ProductDetail = () => {
+  const navigate = useNavigate();
   const [actionSheetVisible, setActionSheetVisible] = useState(false);
-  const [quantity, setQuantity] = useState(1);
 
   const handleAddCart = () => {
     setActionSheetVisible(true);
   };
 
-  const handleQuantityChange = (change) => {
-    setQuantity((prevQuantity) => Math.max(1, prevQuantity + change));
+  const handleAddToCart = () => {
+    setActionSheetVisible(false);
+  };
+
+  const handlePayment = () => {
+    setActionSheetVisible(false);
+    navigate("/homeCart");
   };
 
   return (
@@ -76,7 +83,7 @@ const ProductDetail = () => {
         </Box>
         <Box className="related-products">
           <div className="icon-related-products"><BsShop/></div>
-          <Text className="related-products-title">Danh sản phẩm liên quan</Text>
+          <Text className="related-products-title">Sản phẩm liên quan</Text>
           <Box className="related-products-list">
             {product.relatedProducts.map((relatedProduct) => (
               <Box key={relatedProduct.id} className="related-product-item">
@@ -86,7 +93,7 @@ const ProductDetail = () => {
                   alt={relatedProduct.name}
                 />
                 <Text className="related-product-name">
-                  {relatedProduct.name.length > 18 ? `${relatedProduct.name.substring(0, 18)}..`: relatedProduct.name}
+                  {relatedProduct.name}
                 </Text>
                 <Text className="related-product-price">
                   {relatedProduct.price} đ
@@ -102,74 +109,13 @@ const ProductDetail = () => {
       <Box className="navigate-product">
         <CustomBottomNavigation />
       </Box>
-      <Sheet
+      <SheetCart
+        product={product}
         visible={actionSheetVisible}
         onClose={() => setActionSheetVisible(false)}
-        autoHeight
-        mask
-        handler
-        swipeToClose
-      >
-        <Box p={4} className="custom-product-item" flex flexDirection="column">
-          <Box className="sheet-header-product">
-            <img className="sheet-img-product" src={product.image} />
-            <Text className="sheet-title-product" size="large" bold>
-              {product.name}
-            </Text>
-            <Text>
-              <span className="sheet-price-product">{product.price} đ</span>
-            </Text>
-          </Box>
-          <Box
-            className="sheet-body-product"
-            flex
-            flexDirection="row"
-            alignItems="center"
-            justifyContent="space-between"
-            mt={2}
-          >
-            <Button
-              className="btn-sheet-product"
-              onClick={() => handleQuantityChange(-1)}
-            >
-              -
-            </Button>
-            Số lượng:
-            <Input
-              type="number"
-              value={quantity}
-              onChange={(e) => setQuantity(Number(e.target.value))}
-              style={{ width: "40px", height: "40px", textAlign: "center" }}
-            />
-            <Button
-              className="btn-sheet-increased"
-              onClick={() => handleQuantityChange(1)}
-            >
-              +
-            </Button>
-          </Box>
-          <Box
-            my={4}
-            className="sheet-footer-product"
-            flex
-            flexDirection="row"
-            justifyContent="space-between"
-          >
-            <Button
-              onClick={() => setActionSheetVisible(false)}
-              className="btn-sheet-cart"
-            >
-              Thêm vào giỏ hàng
-            </Button>
-            <Button
-              onClick={() => setActionSheetVisible(false)}
-              className="btn-sheet-payment"
-            >
-              Mua ngay
-            </Button>
-          </Box>
-        </Box>
-      </Sheet>
+        onAddToCart={handleAddToCart}
+        onPayment={handlePayment}
+      />
     </Box>
   );
 };

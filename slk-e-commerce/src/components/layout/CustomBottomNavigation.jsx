@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
-import { BsHouse } from "react-icons/bs";
-import { BsCart } from "react-icons/bs";
-import { openChatScreen } from "../../pages/shared/utils/openChatScreen";
-
+import { BsCart, BsHouse } from "react-icons/bs";
 import "../../css/detailhome/bottomNavigation.css";
+import { useCart } from "../../pages/shared/cart/CartContext";
+
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { keyTab } = location.state || {};
+  const { getCartCount } = useCart();
 
   const [activeTab, setActiveTab] = useState(keyTab || "home");
 
@@ -17,24 +17,26 @@ const CustomBottomNavigation = () => {
     navigate("/", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
+
   const handleNotify = (keyTab) => {
     navigate("/notificationPage", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
+
   const handleCart = (keyTab) => {
     navigate("/homeCart", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
+
   const handleContactUser = (keyTab) => {
     navigate("/contactUser", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
-  const handleMess = (keyTab) => {
-    console.log("Tab active", keyTab);
-  };
+
   return (
     <BottomNavigation
       fixed
+      className="bottom-navigation"
       activeKey={activeTab}
       onChange={(key) => setActiveTab(key)}
     >
@@ -52,9 +54,7 @@ const CustomBottomNavigation = () => {
             <BsHouse />
           </div>
         }
-        onClick={() => {
-          handleHome("home");
-        }}
+        onClick={() => handleHome("home")}
       />
       <BottomNavigation.Item
         className={activeTab === "contact" ? "icon-active" : ""}
@@ -63,12 +63,16 @@ const CustomBottomNavigation = () => {
         icon={
           <div className="accounting-icon-wrapper">
             <Icon icon="zi-clock-1" />
+            <div className="red-circle">1</div> {/* Replace 1 with actual notification count if needed */}
           </div>
         }
-        activeIcon={<Icon icon="zi-clock-1-solid" />}
-        onClick={() => {
-          handleNotify("contact");
-        }}
+        activeIcon={
+          <div className="accounting-icon-wrapper">
+            <Icon icon="zi-clock-1" />
+            <div className="red-circle">1</div>
+          </div>
+        }
+        onClick={() => handleNotify("contact")}
       />
       <BottomNavigation.Item
         className={activeTab === "cart" ? "icon-active" : ""}
@@ -77,32 +81,16 @@ const CustomBottomNavigation = () => {
         icon={
           <div className="accounting-icon-wrapper">
             <BsCart />
+            {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
           </div>
         }
         activeIcon={
           <div className="accounting-icon-wrapper">
             <BsCart />
+            {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
           </div>
         }
-        onClick={() => {
-          handleCart("cart");
-        }}
-      />
-      <BottomNavigation.Item
-        className={activeTab === "mess" ? "icon-active" : ""}
-        key="mess"
-        label="Nhắn tin"
-        icon={
-          <div className="accounting-icon-wrapper">
-            <Icon icon="zi-chat" />
-          </div>
-        }
-        activeIcon={
-          <div className="accounting-icon-wrapper">
-            <Icon icon="zi-chat" />
-          </div>
-        }
-        onClick={openChatScreen}
+        onClick={() => handleCart("cart")}
       />
       <BottomNavigation.Item
         className={activeTab === "user" ? "icon-active" : ""}
@@ -118,9 +106,7 @@ const CustomBottomNavigation = () => {
             <Icon icon="zi-user-solid" />
           </div>
         }
-        onClick={() => {
-          handleContactUser("user");
-        }}
+        onClick={() => handleContactUser("user")}
       />
     </BottomNavigation>
   );
