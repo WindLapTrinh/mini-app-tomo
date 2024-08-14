@@ -1,16 +1,20 @@
-.cart-page {
-  background: #fafafaee;
-}
-.cart-item {
-  display: flex;
-  align-items: center;
+.index-cart-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
   background-color: #fff;
   border-radius: 8px;
   padding: 12px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
 }
 
 .cart-item-image {
@@ -40,38 +44,71 @@
 .cart-item-price {
   font-size: 14px;
   margin-bottom: 4px;
+  color: #00b815;
+  font-weight: 500;
 }
 
 .cart-item-quantity {
+  display: flex;
+  align-items: center;
   font-size: 12px;
   color: #00b815;
   font-weight: bold;
+  position: absolute;
+  bottom: 12px; /* Adjust distance from bottom */
+  right: 12px;  /* Adjust distance from right */
 }
-.payment-details {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 10px;
+
+.quantity-btn {
+  background-color: #f5f5f5;
   border: 1px solid #ddd;
-  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
-.btn-payment {
-  background: #00b815;
+
+.quantity-btn:hover {
+  background-color: #e0e0e0;
 }
-.zaui-input:hover {
-  border-color: #00b815 !important;
+
+.quantity-input {
+  width: 43px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0 5px;
+  font-size: 16px;
+  height: 32px;
 }
-.sum-cart-page {
-  margin-bottom: 30px;
+
+.delete-item-cart {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  cursor: pointer;
 }
-.header-cart-product{
+.icon-delete-item{
+  font-size: 16px;
+}
+
+.delete-item-cart .zi-close {
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.header-cart-product {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .icon-header-cart {
   width: 40px;
   height: 40px;
-  border-radius: 50px;
+  border-radius: 50%;
+}
+
+.sum-cart-page {
+  margin-bottom: 30px;
 }

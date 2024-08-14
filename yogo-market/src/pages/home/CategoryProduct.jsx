@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, Text } from "zmp-ui";
 import { TiShoppingCart } from "react-icons/ti";
 import "../../css/detailhome/swiper/swiper-bundle.min.css";
+
 const categories = [
   {
     id: 1,
@@ -66,6 +68,12 @@ const categories = [
 ];
 
 const CategoryProduct = () => {
+
+  const navigate =  useNavigate();
+  
+  const handleDetailProduct = () => {
+    navigate("/detailProduct");
+  };
   return (
     <Box className="product-today">
       <div className="icon-product-today"><TiShoppingCart/></div>
@@ -78,6 +86,7 @@ const CategoryProduct = () => {
             <div
               key={category.id}
               className="custom-slider-item flex flex-col space-y-2 items-center category-item"
+              onClick={handleDetailProduct}
             >
               <img
                 className=" custom-border-image"

@@ -42,7 +42,7 @@ const gotoCategory = (id) => {
 
 const Home = (props) => {
   SetTitleHeader({
-    title: "SLK Market",
+    title: "Yogo Market",
   });
   const navigate = useNavigate();
 

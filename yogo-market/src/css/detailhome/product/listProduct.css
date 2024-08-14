@@ -11,6 +11,7 @@
     margin-bottom: 50px !important;
     padding:10px;
     background: #ffffff;
+    margin-bottom: 60px;
 } 
 .product-index{
     padding: 10px;
@@ -18,12 +19,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
     border-radius: 10px;
 } 
+.product-name-item{
+   margin-top: 5px;
+}
 .price-item{
     float: left;
     color: #00b815;
   }
- .product-sold{
+ .product-icon{
     float: right;
+    line-height: unset;
+    color: #00b815;
+    font-size: 20px;
  }
  .descript-product{
     padding:10px;
@@ -35,3 +42,64 @@
     font-weight: 500;
     font-size: 20px;
  }
+ .title-category-product{
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+.all-product{
+    font-weight: 500;
+    color: #00b815;
+    font-size: 14px;
+}
+.sheet-header-product{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccc;
+}
+
+ .sheet-img-product{
+    width: 140px;
+    float: left;
+    margin-right: 8px;
+    border-radius: 8px;
+ }
+ .sheet-title-product{
+    font-weight: 500;
+ }
+ .sheet-price-product{
+    color: #00b815;
+    font-weight: 500;
+ }
+ .sheet-footer-product{
+    padding: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+ }
+ .btn-sheet-product{
+    background-color: #00b815 !important;
+    padding: 0px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+ }
+ .btn-sheet-increased{
+    background-color: #00b815 !important;
+    padding: 0px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.btn-sheet-payment{
+    background-color: #00b815 !important;
+    font-weight: 500;
+}
+.btn-sheet-cart{
+    background-color: #ffffff !important;
+    color: #00b815;
+    font-weight: 500;
+    border: 1px solid;
+}
