@@ -13,7 +13,7 @@ const OrderCart = () => {
   return (
     <Box className="order-cart">
       <img className="image-order-cart" src="/images/cart/order-cart.png" alt="Order cart" />
-      <Text>Bạn chưa có sản phẩm nào trong giỏ hàng. Quay về trang chủ để mua sắm !</Text>
+      <Text>Bạn chưa có sản phẩm nào trong giỏ hàng, quay về trang chủ để mua sắm !</Text>
       <Button className="btn-order-cart" 
               onClick={handleHome}
       >

@@ -13,6 +13,7 @@ import ContactPayment from "./ContactPayment.jsx";
 
 import { paymentContext } from "../shared/common/payment/PaymentContext";
 import "../../css/payment/paymentDetail.css";
+import StatusPayment from "./StatusPayment.jsx";
 
 const HomePayment = () => {
   SetTitleHeader({
@@ -34,6 +35,7 @@ const HomePayment = () => {
                                 <MethodPayment />
                                 <InfoShipping />
                                 <ContactPayment/>
+                                <StatusPayment/>
                               </Box>) 
                           : (<OrderCart/>)}
     </Box>
