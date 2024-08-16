@@ -14,13 +14,16 @@ import HomeCart from "../pages/cart/HomeCart.jsx";
 import UpdatePage from "../pages/shared/pages/Update.jsx";
 import Language from "../pages/shared/pages/Language.jsx";
 import AddressPage from "../pages/cart/AddressCart.jsx";
-import { CartProvider } from "../pages/shared/cart/CartContext"; // Adjust the path if necessary
+import HomePayment from "../pages/payment/HomePayment.jsx";
+import { CartProvider } from "../pages/shared/common/cart/CartContext";
+import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
 
 const MyApp = () => {
   const [tasks, setTasks] = useState([]);
   return (
     <RecoilRoot>
-      <CartProvider> 
+      <CartProvider>
+      <PaymentProvider>
         <App>
           <SnackbarProvider>
             <ZMPRouter>
@@ -32,12 +35,14 @@ const MyApp = () => {
                 <Route path="/contactUser" element={<UserPage setTasks={setTasks} tasks={tasks} />} />
                 <Route path="/purchaseHistory" element={<PurchaseHistory setTasks={setTasks} tasks={tasks} />} />
                 <Route path="/update" element={<UpdatePage setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
                 <Route path="/addressCart" element={<AddressPage setTasks={setTasks} tasks={tasks} />} />
+                <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
+                <Route path="/homePayment" element={<HomePayment setTasks={setTasks} tasks={tasks} />} />
               </AnimationRoutes>
             </ZMPRouter>
           </SnackbarProvider>
         </App>
+        </PaymentProvider>
       </CartProvider>
     </RecoilRoot>
   );

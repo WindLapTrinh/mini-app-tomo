@@ -11,7 +11,7 @@
   padding-bottom: 10px;
 }
 .title-product-payment {
-  color: #00b815;
+  color: #696f6a;
   font-weight: 500;
 }
 .detail-shipping-payment {
@@ -21,7 +21,7 @@
   color: #333;
 }
 .icon-payment {
-  color: #00b815;
+  color: #696f6a;
   font-size: 18px;
 }
  /* map item product  */
@@ -52,7 +52,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  margin-left: 10px;
 }
 .product-payment-info{
   flex: 1;
@@ -61,18 +60,17 @@
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
-  margin-left: 9px;
 }
 .total-item-payment{
   font-size: 12px;
-  color: #00b815;
+  color: #696f6a;
   font-weight: bold;
   position: absolute;
   bottom: 12px; 
   right: 12px; 
 }
 .quantity-product-item{
-  color: #00b815;
+  color: #696f6a;
   font-weight: 500;
   font-size: 16px;
 }

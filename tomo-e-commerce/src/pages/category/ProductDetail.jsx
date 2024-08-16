@@ -13,7 +13,7 @@ import {
 import ProductList from "../home/ProductList.jsx";
 import SliderCategory from "./SliderCategory.jsx";
 import CustomBottomNavigation from "../../components/layout/CustomBottomNavigation.jsx";
-import SheetCart from "../shared/cart/SheetCart"; 
+import SheetCart from "../shared/common/cart/SheetCart"; 
 
 import { BsShop } from "react-icons/bs";
 import "../../css/detailhome/product/productDetail.css";
