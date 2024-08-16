@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Box, Text, Button, Input, Icon } from "zmp-ui";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import ShippingInfo from "./ShippingInfo";
-import PaymentDetail from "./PaymentDetail";
+import InfomationPayment from "./InfomationPayment";
 import OrderProduct from "./OrderProduct";
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
 import InfomationVoucher from "./InfomationVoucher";
-import { useCart } from "../shared/cart/CartContext";
-
+import { useCart } from "../shared/common/cart/CartContext";
 import "../../css/cart/homeCart.css";
 import "../../css/cart/shippingInformation.css";
 
@@ -15,10 +14,8 @@ const HomeCart = () => {
   SetTitleHeader({
     title: "Giỏ hàng của bạn",
   });
-
   const { cart, removeItemFromCart } = useCart();
   const [items, setItems] = useState(cart);
-
   useEffect(() => {
     setItems(cart);
   }, [cart]);
@@ -92,7 +89,7 @@ const HomeCart = () => {
         </Box>
         <ShippingInfo />
         <InfomationVoucher />
-        <PaymentDetail />
+        <InfomationPayment />
       </Box>
       <OrderProduct />
       <CustomBottomNavigation />

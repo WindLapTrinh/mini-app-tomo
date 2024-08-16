@@ -1,10 +1,10 @@
 import React from "react";
 import { List, Icon, Box, Text } from "zmp-ui";
-import "../../css/cart/paymentDetail.css";
+import "../../css/cart/infomationPayment.css";
 import { FaSackDollar } from "react-icons/fa6";
 import { FaTruck } from "react-icons/fa6";
 import { Title } from "chart.js";
-const PaymentDetail = () => {
+const InfomationPayment = () => {
   return (
     <Box className="detail-payment">
       <Box className="header-cart-product">
@@ -69,4 +69,4 @@ const PaymentDetail = () => {
   );
 };
 
-export default PaymentDetail;
+export default InfomationPayment;

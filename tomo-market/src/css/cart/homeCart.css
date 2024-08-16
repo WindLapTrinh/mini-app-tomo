@@ -13,10 +13,10 @@
 
 .cart-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex: 1;
 }
-
+ 
 .cart-item-image {
   flex-shrink: 0;
   width: 100px;
@@ -96,18 +96,6 @@
 
 .delete-item-cart .zi-close {
   font-size: 20px; /* Adjust size as needed */
-}
-
-.header-cart-product {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.icon-header-cart {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }
 
 .sum-cart-page {

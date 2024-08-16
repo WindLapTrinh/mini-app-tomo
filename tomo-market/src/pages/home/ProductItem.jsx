@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Text, Icon } from "zmp-ui";
 import { useNavigate } from "react-router-dom";
-import SheetCart from "../shared/cart/SheetCart"; 
+import SheetCart from "../shared/common/cart/SheetCart"; 
 
 const ProductItem = ({ product }) => {
   const navigate = useNavigate();

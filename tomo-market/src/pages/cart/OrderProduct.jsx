@@ -1,15 +1,28 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, Text, Button } from "zmp-ui";
+import { useCart } from "../shared/common/cart/CartContext";
+import { usePayment } from "../shared/common/payment/PaymentContext";
 import "../../css/cart/orderProduct.css";
 
 const OrderProduct = () => {
+  const navigate = useNavigate();
+  const { cart } = useCart(); 
+  const { setPaymentData } = usePayment();
   const calculateTotal = () => {
-    return ("100.000");
+    const total = cart.reduce((sum, item) => sum + parseInt(item.price.replace(/\./g, "")) * item.quantity,
+    0
+  ).toLocaleString("vi-VN");
+    return total;
   };
+  
 
   const handleCheckout = () => {
+    setPaymentData(cart);
     // Xử lý thanh toán
-    console.log("Thanh toán");
+    navigate("/homePayment");
+
+    console.log(cart);
   };
 
   return (
