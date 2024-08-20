@@ -1,28 +1,32 @@
-.update-page {
+.update-cart-page {
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .update-content {
+  .update-cart-content {
     text-align: center;
   }
   
-  .update-image {
+  .update-cart-image {
     width: 340px;
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
   }
   
-  .update-message {
+  .update-cart-message {
     color: #333;
   }
-  .btn-home-update{
+  .description-cart-message{
+    font-size: 13px;
+    color: #878686;
+  }
+  .btn-home-cart-update{
     background-color: #ffa53d;
     margin-top: 10px;
   }
   .btn-home-update:hover{
-    background-color: #ffa53d;
+    background-color: #333;
     transition: 0.5s;
   }

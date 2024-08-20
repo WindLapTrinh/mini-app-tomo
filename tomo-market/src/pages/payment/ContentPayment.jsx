@@ -33,7 +33,7 @@ const ContentPayment = ({ cartData }) => {
           <Text className="title-content-payment">Thành tiền:</Text>
         </Box>
         <Box className="value">
-          <Text>{(parseInt(calculateTotal().replace(/\./g, "")) + 300).toLocaleString("vi-VN")} đ</Text>
+          <Text>{(calculateTotal())} đ</Text>
         </Box>
       </Box>
     </Box>

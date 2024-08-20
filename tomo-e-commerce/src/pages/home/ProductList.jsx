@@ -10,7 +10,7 @@ const sampleProducts = [
     name: "iPhone 15 Pro Max Titan Trắng",
     image: "/images/product/iphone-15-promax-trang-1.jpg",
     category: "iPhone 15 Pro Max",
-    price: "29.490.000",
+    price: 29490000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -18,7 +18,7 @@ const sampleProducts = [
     name: "iPhone 15 Pro Max Titan Xanh",
     image: "/images/product/iphone-15-promax-xanh-1.jpg",
     category: "iPhone 15 Pro Max",
-    price: "29.490.000",
+    price: 29490000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -26,7 +26,7 @@ const sampleProducts = [
     name: "iPhone 15 Pro Max Titan Đen",
     image: "/images/product/iphone-15-promax-den-1.jpg",
     category: "iPhone 15 Pro Max",
-    price: "29.490.000",
+    price: 29490000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -34,7 +34,7 @@ const sampleProducts = [
     name: "iPhone 15 Pro Max Titan Tự Nhiên",
     image: "/images/product/iphone-15-promax-xanh-vang-1.jpg",
     category: "iPhone 15 Pro Max",
-    price: "29.490.000",
+    price: 29490000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -42,7 +42,7 @@ const sampleProducts = [
     name: "Macbook Air M3 Màu Xám",
     image: "/images/product/macbook-air-m3-13-2024-xam-1.jpg",
     category: "MacBook Ari M3 13 2024",
-    price: "26.990.000",
+    price: 26990000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -50,7 +50,7 @@ const sampleProducts = [
     name: "Macbook Air M3 Màu Bạc Trắng",
     image: "/images/product/macbook-air-m3-13-2024-bac-1.jpg",
     category: "MacBook Ari M3 13 2024",
-    price: "26.990.000",
+    price: 26990000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -58,7 +58,7 @@ const sampleProducts = [
     name: "Macbook Air M3 Màu Xanh",
     image: "/images/product/macbook-air-m3-13-2024-xanh-1.jpg",
     category: "MacBook Ari M3 13 2024",
-    price: "26.990.000",
+    price: 26990000,
     icon: "zi-plus-circle-solid",
   },
   {
@@ -66,7 +66,7 @@ const sampleProducts = [
     name: "Macbook Air M3 Màu Vàng",
     image: "/images/product/macbook-air-m3-13-2024-vang-1.jpg",
     category: "MacBook Ari M3 13 2024",
-    price: "26.990.000",
+    price: 26990000,
     icon: "zi-plus-circle-solid",
   },
 ];

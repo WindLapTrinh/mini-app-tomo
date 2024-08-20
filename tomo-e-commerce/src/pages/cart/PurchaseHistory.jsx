@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Tabs } from "zmp-ui";
 import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
+import UpdateCart from "@/pages/shared/pages/UpdateCart.jsx";
 import "../../css/cart/prurchaseHistory.css";
 
 const PurchaseHistory = () => {
@@ -21,6 +22,7 @@ const PurchaseHistory = () => {
           <div className="tabs-wrapper">
             <Tabs className="horizontal-tabs" id="purchase-history-tabs" scrollable="true">
               <Tabs.Tab key="tab1" label="Tất cả">
+                <UpdateCart/>
               </Tabs.Tab>
               <Tabs.Tab key="tab2" label="Đang xử lý">
               </Tabs.Tab>
