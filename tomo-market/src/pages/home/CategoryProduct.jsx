@@ -9,61 +9,61 @@ const categories = [
     id: 1,
     name: "Thịt heo xay",
     image: "/images/product/flesh-1.jpg",
-    price: "20.000",
+    price: 20000,
   },
   {
     id: 2,
     name: "Bẹ sườn non",
     image: "/images/product/flesh-2.jpg",
-    price: "342.000",
+    price: 342000,
   },
   {
     id: 3,
     name: "Tôm thẻ Minh Phú",
     image: "/images/product/seafood-1.jpg",
-    price: "678.000",
+    price: 678000,
   },
   {
     id: 4,
     name: "Gà H'Mông nguyên con",
     image: "/images/product/flesh-3.jpg",
-    price: "780.000",
+    price: 780000,
   },
   {
     id: 5,
     name: "Mực nang Phú Quốc",
     image: "/images/product/seafood-2.jpg",
-    price: "342.000",
+    price: 342000,
   },
   {
     id: 6,
     name: "Thịt vụn bò",
     image: "/images/product/flesh-4.jpg",
-    price: "120.000",
+    price: 120000,
   },
   {
     id: 7,
     name: "Hàu sashiml",
     image: "/images/product/seafood-3.jpg",
-    price: "60.000",
+    price: 60000,
   },
   {
     id: 8,
     name: "Cá Basa cắt lát",
     image: "/images/product/flesh-5.jpg",
-    price: "48.000",
+    price: 48000,
   },
   {
     id: 9,
     name: "Mực nút",
     image: "/images/product/seafood-4.jpg",
-    price: "230.000",
+    price: 230000,
   },
   {
     id: 10,
     name: "Mực ống",
     image: "/images/product/seafood-5.jpg",
-    price: "206.000",
+    price: 206000,
   },
 ];
 
@@ -99,7 +99,7 @@ const CategoryProduct = () => {
                     ? `${category.name.substring(0, 18)}...`
                     : category.name}
                 </span>
-                <span className="price-product-today">{category.price} đ</span>
+                <span className="price-product-today">{category.price.toLocaleString("vi-VN")} đ</span>
               </Text> 
             </div>
           ))}

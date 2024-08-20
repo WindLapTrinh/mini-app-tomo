@@ -1,6 +1,8 @@
 .header-home{
   background: linear-gradient(to bottom, rgb(31 182 49), rgb(112 223 121));
-  border-bottom: 1px solid #c6c5c5;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  /* border-bottom: 1px solid #c6c5c5; */
 }
 
 /* category product */

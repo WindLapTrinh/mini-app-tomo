@@ -23,18 +23,23 @@ const HomeCart = () => {
   }, [cart]);
 
   const handleQuantityChange = (id, change) => {
-    setItems(
-      items.map((item) =>
+    setItems((prevItems) =>
+      prevItems.map((item) =>
         item.id === id
-          ? { ...item, quantity: Math.max(item.quantity + change, 1) }
+          ? {
+              ...item,
+              quantity: Math.max(item.quantity + change, 1),
+            }
           : item
       )
     );
   };
+  
 
   const handleDeleteProduct = (id) => {
     removeItemFromCart(id);
   };
+
 
   return (
     <Box className="cart-page" p={4}>
@@ -64,7 +69,7 @@ const HomeCart = () => {
                     <Box className="cart-item-info">
                       <Text className="cart-item-name">{item.name}</Text>
                       <Text className="cart-item-price">
-                        {item.price.toLocaleString()} đ
+                      {(item.price *item.quantity).toLocaleString("vi-VN")} đ
                       </Text>
                     </Box>
                   </Box>
@@ -100,7 +105,7 @@ const HomeCart = () => {
           <InfomationVoucher />
           <InfomationPayment />
         </Box>
-        <OrderProduct />
+        <OrderProduct items={items} />
         <CustomBottomNavigation />
       </Box> : <OrderCart/>}
     </Box>

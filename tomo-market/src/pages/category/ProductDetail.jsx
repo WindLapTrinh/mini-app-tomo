@@ -22,7 +22,7 @@ const product = {
   id: 1,
   name: "Rau cải bẹ",
   image: "/images/product/veg-2.jpg",
-  price: "20.000",
+  price: 20000,
   description:
     "Dầu ăn ngày nay ngày càng đa dạng phù hợp hơn trong từng nhu cầu sử dụng. Có thể sử dụng được.",
   relatedProducts: [
@@ -30,25 +30,25 @@ const product = {
       id: 2,
       name: "Xà lách thủy tinh",
       image: "/images/product/veg-1.jpg",
-      price: "20.000",
+      price: 20000,
     },
     {
       id: 3,
       name: "Cải bẹ xanh",
       image: "/images/product/veg-2.jpg",
-      price: "15.000",
+      price: 15000,
     },
     {
       id: 4,
       name: "Bắp cải trắng",
       image: "/images/product/veg-3.jpg",
-      price: "50.000",
+      price: 50000,
     },
     {
       id: 5,
       name: "Rau mồng tơi",
       image: "/images/product/veg-4.jpg",
-      price: "10.000",
+      price: 10000,
     },
   ],
 };
@@ -76,7 +76,7 @@ const ProductDetail = () => {
       <Box className="product-detail">
         <Box className="product-info">
           <Text className="product-name">{product.name}</Text>
-          <Text className="product-price">{product.price} đ</Text>
+          <Text className="product-price">{product.price.toLocaleString("vi-VN")} đ</Text>
           <Text className="product-description">{product.description}</Text>
           <Button className="add-to-cart-button" onClick={handleAddCart}>
             Thêm vào giỏ
@@ -97,7 +97,7 @@ const ProductDetail = () => {
                   {relatedProduct.name}
                 </Text>
                 <Text className="related-product-price">
-                  {relatedProduct.price} đ
+                  {relatedProduct.price.toLocaleString("vi-VN")} đ
                 </Text>
               </Box>
             ))}

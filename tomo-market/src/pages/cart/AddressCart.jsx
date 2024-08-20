@@ -7,21 +7,22 @@ import "../../css/cart/addressPage.css";
 const AddressPage = () => {
   const [isDefault, setIsDefault] = useState(false);
   const { userInfo, loading: userLoading, error: userError, refetch: refetchUser } = useUser();
-  const { phoneNumber, loading: phoneLoading, error: phoneError, fetchPhoneNumber } = usePhoneNumber();
+  // const { phoneNumber, loading: phoneLoading, error: phoneError, fetchPhoneNumber } = usePhoneNumber();
 
-  useEffect(() => {
-    // Gọi API khi component render đầu tiên
-    refetchUser();
-    fetchPhoneNumber();
-  }, []);
+  // useEffect(() => {
+  //   // Gọi API khi component render đầu tiên
+  //   refetchUser();
+  //   fetchPhoneNumber();
+  // }, []);
 
+  console.log("Infomation address".userInfo);
   const handleDefaultChange = (e) => {
     setIsDefault(e.target.checked);
   };
 
   if (userLoading) return <div>Loading...</div>;
   if (userError) return <div>Error loading user info: {userError.message}</div>;
-  if (phoneError) return <div>Error loading phone number: {phoneError.message}</div>;
+  // if (phoneError) return <div>Error loading phone number: {phoneError.message}</div>;
 
   return (
     <Box className="address-page" p={4}>
