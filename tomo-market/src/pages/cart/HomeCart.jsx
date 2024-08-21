@@ -69,7 +69,7 @@ const HomeCart = () => {
                     <Box className="cart-item-info">
                       <Text className="cart-item-name">{item.name}</Text>
                       <Text className="cart-item-price">
-                      {(item.price *item.quantity).toLocaleString("vi-VN")} đ
+                      {item.price.toLocaleString("vi-VN")} đ
                       </Text>
                     </Box>
                   </Box>

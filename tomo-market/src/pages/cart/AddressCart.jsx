@@ -24,6 +24,10 @@ const AddressPage = () => {
   if (userError) return <div>Error loading user info: {userError.message}</div>;
   // if (phoneError) return <div>Error loading phone number: {phoneError.message}</div>;
 
+  const handleSubmitAddress = () => {
+
+  };
+
   return (
     <Box className="address-page" p={4}>
       {/* Phần 1: Liên hệ */}
@@ -73,7 +77,7 @@ const AddressPage = () => {
         <Text className="default-text">Đặt làm địa chỉ mặc định</Text>
       </Box>
 
-      <Button className="save-button">
+      <Button className="save-button" onClick={handleSubmitAddress}>
         <Icon icon="zi-plus-circle" className="icon-address" />
         <span>Thêm địa chỉ</span>
       </Button>
