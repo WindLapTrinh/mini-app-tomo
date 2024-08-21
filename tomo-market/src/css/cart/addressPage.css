@@ -45,4 +45,7 @@
   .icon-address{
     margin-right: 10px;
   }
-  
+  .zaui-sheet-content{
+    height: 400px;
+    text-align: center;
+  }
