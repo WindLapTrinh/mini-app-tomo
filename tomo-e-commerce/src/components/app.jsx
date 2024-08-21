@@ -14,35 +14,40 @@ import HomeCart from "../pages/cart/HomeCart.jsx";
 import UpdatePage from "../pages/shared/pages/Update.jsx";
 import Language from "../pages/shared/pages/Language.jsx";
 import AddressPage from "../pages/cart/AddressCart.jsx";
+import ListAddress from "../pages/cart/ListAddress.jsx";
 import HomePayment from "../pages/payment/HomePayment.jsx";
 import { CartProvider } from "../pages/shared/common/cart/CartContext";
 import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
+import { AddressProvider } from "../pages/shared/common/cart/AddressContext.jsx";
 
 const MyApp = () => {
   const [tasks, setTasks] = useState([]);
   return (
     <RecoilRoot>
       <CartProvider>
-      <PaymentProvider>
-        <App>
-          <SnackbarProvider>
-            <ZMPRouter>
-              <AnimationRoutes>
-                <Route path="/" element={<Home setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/categoryByProduct" element={<CategoryByProduct setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/detailProduct" element={<ProductDetail setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/notificationPage" element={<NotificationPage setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/contactUser" element={<UserPage setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/purchaseHistory" element={<PurchaseHistory setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/update" element={<UpdatePage setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/addressCart" element={<AddressPage setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
-                <Route path="/homePayment" element={<HomePayment setTasks={setTasks} tasks={tasks} />} />
-              </AnimationRoutes>
-            </ZMPRouter>
-          </SnackbarProvider>
-        </App>
-        </PaymentProvider>
+        <AddressProvider>
+          <PaymentProvider>
+              <App>
+                <SnackbarProvider>
+                  <ZMPRouter>
+                    <AnimationRoutes>
+                      <Route path="/" element={<Home setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/categoryByProduct" element={<CategoryByProduct setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/detailProduct" element={<ProductDetail setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/notificationPage" element={<NotificationPage setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/contactUser" element={<UserPage setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/purchaseHistory" element={<PurchaseHistory setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/update" element={<UpdatePage setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/addressCart" element={<AddressPage setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/homePayment" element={<HomePayment setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/listAddress" element={<ListAddress setTasks={setTasks} tasks={tasks} />} />
+                    </AnimationRoutes>
+                  </ZMPRouter>
+                </SnackbarProvider>
+              </App>
+          </PaymentProvider>
+        </AddressProvider>
       </CartProvider>
     </RecoilRoot>
   );
