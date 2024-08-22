@@ -39,12 +39,12 @@
 .title-ticker{
     font-size: 14px;
     font-weight: 500;
-    color: #ffa53d;
+    color: #00b815;
 }
 .descript-ticker{
     font-size: 11px;
     font-weight: 500;
-    color: #ffa53d;
+    color: #00b815;
 }
 .sum-voucher{
     color: orange;
@@ -76,7 +76,7 @@
 }
 .input-sheet-body{
     float: left !important;
-    width: 65%;
+    width: auto;
     margin: 0px 5px 0px 0px;
 }
 .title-sheet-body{
@@ -136,5 +136,5 @@
     border-top: 1px solid #c0c0c0;
 }
 .btn-submit-voucher:hover{
-    background-color: #7ee089;
+    background-color: #e0d37e;
 }
