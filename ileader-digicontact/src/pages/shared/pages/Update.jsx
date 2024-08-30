@@ -16,7 +16,7 @@ const UpdatePage = () => {
         justifyContent="center"
       >
         <img
-          src="https://storyset.com/illustration/revenue/bro"
+          src="./images/update.png"
           alt="Update Image"
           className="update-image"
         />

@@ -1,0 +1,8 @@
+.custom-table th{
+  padding: 8px;
+  text-align: left !important;
+  white-space: nowrap;
+}
+.custom-table .item-colum-name{
+    text-align: center !important;
+}
