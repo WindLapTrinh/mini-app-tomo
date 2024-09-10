@@ -18,7 +18,7 @@ import ServiceStore from "@/pages/home/ServiceStore";
 import Introduce from "@/pages/home/Introduce";
 import HeaderListProduct from "@/pages/home/HeaderListProduct";
 
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import Popup from "@/pages/shared/pages/Popup";
 
@@ -40,7 +40,7 @@ const gotoCategory = (id) => {
 
 const Home = (props) => {
   SetTitleHeader({
-    title: "Wind E-commerce",
+    title: "Wind Lập Trình",
   });
   const navigate = useNavigate();
 

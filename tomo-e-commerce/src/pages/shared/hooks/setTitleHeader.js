@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { configAppView } from "zmp-sdk/apis";
 
-const SetTitleHeader = ({ title, headerColor, statusBarColor, headerTextColor }) => {
+const SetTitleHeader = ({ title, headerColor, statusBarColor, headerTextColor, leftButton }) => {
   useEffect(() => {
     configAppView({
       headerColor: headerColor || "#ffa53d",
@@ -10,8 +10,8 @@ const SetTitleHeader = ({ title, headerColor, statusBarColor, headerTextColor })
       hideAndroidBottomNavigationBar: true,
       hideIOSSafeAreaBottom: true,
       actionBar: {
-        title: title || "Tomo E-commerce",
-        leftButton: "back",
+        title: title || "Wind Lập Trình",
+        leftButton: leftButton ||"back",
       },
       success: (res) => {
         console.log("Gọi thành công");

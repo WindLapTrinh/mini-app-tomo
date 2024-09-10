@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsCart, BsHouse } from "react-icons/bs";
-import "../../css/detailhome/bottomNavigation.css";
-import { useCart } from "../../pages/shared/common/cart/CartContext";
+import "../../../css/detailhome/bottomNavigation.css";
+import { useCart } from "../common/cart/CartContext";
 
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ const CustomBottomNavigation = () => {
   };
 
   const handleContactUser = (keyTab) => {
-    navigate("/contactUser", { state: { keyTab } });
+    navigate("/user", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
 
@@ -95,7 +95,7 @@ const CustomBottomNavigation = () => {
       <BottomNavigation.Item
         className={activeTab === "user" ? "icon-active" : ""}
         key="user"
-        label="Cá nhân"
+        label="Tài khoản"
         icon={
           <div className="accounting-icon-wrapper">
             <Icon icon="zi-user" />
