@@ -41,6 +41,7 @@ const gotoCategory = (id) => {
 const Home = (props) => {
   SetTitleHeader({
     title: "Wind Lập Trình",
+    leftButton: "none",
   });
   const navigate = useNavigate();
 

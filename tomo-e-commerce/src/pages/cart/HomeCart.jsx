@@ -15,6 +15,8 @@ import "../../css/cart/shippingInformation.css";
 const HomeCart = () => {
   SetTitleHeader({
     title: "Giỏ hàng của bạn",
+    leftButton: "none",
+
   });
   const { cart, removeItemFromCart } = useCart();
   const [items, setItems] = useState(cart);

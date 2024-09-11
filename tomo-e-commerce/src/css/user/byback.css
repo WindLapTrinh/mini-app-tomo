@@ -62,6 +62,7 @@
   float: left;
   font-size: 12px;
   color: #bbbbbb;
+  margin-top: 0px !important;
 }
 
 .icon-product-buy-back {
@@ -118,9 +119,13 @@
   color: #9f9c98;
 }
 .add-cart-buy{
-  font-size: 23px;
+  font-size: 14px;
+  color: #fc0c0c;
 }
 .infomation-cart-buy{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-top: 0px !important;
+
 }
