@@ -16,6 +16,7 @@ import Language from "../pages/shared/pages/Language.jsx";
 import AddressPage from "../pages/cart/AddressCart.jsx";
 import ListAddress from "../pages/cart/ListAddress.jsx";
 import HomePayment from "../pages/payment/HomePayment.jsx";
+import Evaluate from "../pages/evaluate/Home.jsx"
 import { CartProvider } from "../pages/shared/common/cart/CartContext";
 import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
 import { AddressProvider } from "../pages/shared/common/cart/AddressContext.jsx";
@@ -42,6 +43,8 @@ const MyApp = () => {
                       <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
                       <Route path="/homePayment" element={<HomePayment setTasks={setTasks} tasks={tasks} />} />
                       <Route path="/listAddress" element={<ListAddress setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/evaluate" element={<Evaluate setTasks={setTasks} tasks={tasks} />} />
+                    
                     </AnimationRoutes>
                   </ZMPRouter>
                 </SnackbarProvider>

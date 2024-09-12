@@ -13,9 +13,11 @@ import "../../css/user/home.css";
 
 const Home = () => {
   SetTitleHeader({
-    title: " ",
+    title: "Tài khoản",
     leftButton: "none",
   });
+  const {keyTab } = location.state || {};
+
   const user = {
     avatar: "./images/user/user-wind.jpg", // Replace with real image
     name: "Wind Lập Trình",

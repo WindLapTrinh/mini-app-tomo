@@ -11,6 +11,7 @@ import "../../css/user/home.css";
 const FlashSale = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const {keyTab } = location.state || {};
 
   // Giả sử các chức năng của bạn có tên cụ thể
   const functions = [
@@ -19,6 +20,10 @@ const FlashSale = () => {
     { id: 3, title: "Chờ giao hàng", icon: <CiDeliveryTruck /> },
     { id: 4, title: "Đánh giá", icon: <CiStar /> },
   ];
+
+  const handleItemClick = () => {
+    navigate("/evaluate", {state:{keyTab}})
+  }
 
   return (
     <Box className="page-user-cart">
@@ -38,6 +43,7 @@ const FlashSale = () => {
           <Box
             key={func.id}
             className="item-func-cart"
+            onClick={func.title == "Đánh giá" ? handleItemClick :""}
           >
             <Box className="icon-func-cart">{func.icon}</Box>
             <Text className="title-func-cart">{func.title}</Text>
