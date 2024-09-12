@@ -82,6 +82,9 @@
 /* end css infomation  */
 
 /* css flash sale  */
+.page-flash-sale{
+  padding-top: 5px;
+}
 .box-header-sale{
   display: flex;
   align-items: center;

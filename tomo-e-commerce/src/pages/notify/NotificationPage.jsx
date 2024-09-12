@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Text, Button } from "zmp-ui";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
+import CustomHeader from "../shared/pages/CustomHeader";
 
 import "../../css/notify/notifyPage.css";
 
@@ -17,10 +18,6 @@ const notifications = [
 ];
 
 const NotificationPage = () => {
-  SetTitleHeader({
-    title: "Thông báo của bạn",
-    leftButton: "none",
-  });
   const location = useLocation();
   const navigate = useNavigate();
   
@@ -30,6 +27,8 @@ const NotificationPage = () => {
   }
 
   return (
+    <Box>
+      <CustomHeader title={"Thông báo"}/>
     <Box className="notification-page">
       <Box className="notification-list">
         {notifications.map((notification) => (
@@ -57,6 +56,7 @@ const NotificationPage = () => {
         ))}
       </Box>
       <CustomBottomNavigation />
+    </Box>
     </Box>
   );
 };

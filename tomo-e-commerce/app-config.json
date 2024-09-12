@@ -1,18 +1,25 @@
+
 {
   "app": {
-    "title": "Shop Wind",
-    "headerTitle": "Shop Wind",
-    "headerColor": "#ffa53d",
-    "textColor": "white",
+    "title": "Wind Shop",
+    "headerColor": "",
+    "textColor": "#ffffff",
     "statusBarColor": "#ffa53d",
-    "leftButton": "back",
-    "statusBar": "normal",
-    "actionBarHidden": false,
+    "leftButton": "none",
+    "statusBar": "transparent",
+    "selfControlLoading": false,
     "hideAndroidBottomNavigationBar": false,
-    "hideIOSSafeAreaBottom": false
+    "hideIOSSafeAreaBottom": false,
+    "actionBarHidden": true
   },
   "debug": false,
   "listCSS": [],
   "listSyncJS": [],
-  "listAsyncJS": []
+  "listAsyncJS": [],
+  "template": {
+    "primaryColor": "#006af5",
+    "prefixCurrencySymbol": false,
+    "currencySymbol": "đ",
+    "headerLogo": ""
+  }
 }

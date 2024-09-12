@@ -20,7 +20,7 @@ import Evaluate from "../pages/evaluate/Home.jsx"
 import { CartProvider } from "../pages/shared/common/cart/CartContext";
 import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
 import { AddressProvider } from "../pages/shared/common/cart/AddressContext.jsx";
-
+import "../pages/shared/styles/app.css";
 const MyApp = () => {
   const [tasks, setTasks] = useState([]);
   return (

@@ -21,7 +21,7 @@ import HeaderListProduct from "@/pages/home/HeaderListProduct";
 import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import Popup from "@/pages/shared/pages/Popup";
-
+import CustomHeader from "../shared/pages/CustomHeader";
 const products = [
   { id: 1, name: "Điện thoại", image: "/images/category/iPhone.jpg" },
   { id: 2, name: "Laptop", image: "/images/category/laptop.jpg" },
@@ -39,10 +39,6 @@ const gotoCategory = (id) => {
 };
 
 const Home = (props) => {
-  SetTitleHeader({
-    title: "Wind Lập Trình",
-    leftButton: "none",
-  });
   const navigate = useNavigate();
 
   const handleServiceStoreClick = (id) => {
@@ -66,6 +62,8 @@ const Home = (props) => {
     setShowPopup(false);
   }
   return (
+    <Box>
+      <CustomHeader title={"Wind Lập Trình"} subtitle={"Wecom, SLK Solutions"} imageUrl={"./images/logo/logo-slk.jpg"}/>
     <Page className="home">
  <Popup show={showPopup} onClose={handleClosePopup} />
       <Box className="header-home">
@@ -83,6 +81,7 @@ const Home = (props) => {
       </Box>
       <CustomBottomNavigation />
     </Page>
+    </Box>
   );
 };
 
